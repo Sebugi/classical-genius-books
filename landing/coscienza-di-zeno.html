@@ -39,6 +39,7 @@ h1{font-size:1.7rem;line-height:1.2;margin:.2em 0 .3em;text-align:center}
 .start{display:block;width:100%;padding:20px 14px;margin-top:6px;font:inherit;font-weight:bold;font-size:1.5rem;color:#fff;background:linear-gradient(#5d8a4a,#46703a);border:0;border-radius:12px;cursor:pointer;box-shadow:0 3px 0 #2f5226}
 .start:active{transform:translateY(2px);box-shadow:0 1px 0 #2f5226}
 </style>
+<script defer src="https://cloud.umami.is/script.js" data-website-id="86c03d25-c58e-427d-a332-2fb69da70300"></script>
 </head>
 <body>
 <div class="wrap">
@@ -50,7 +51,7 @@ h1{font-size:1.7rem;line-height:1.2;margin:.2em 0 .3em;text-align:center}
 <h2>Che cos'è questo test?</h2>
 <p>Un gioco gratuito di due minuti: leggi cinque frasi e indovina da quale libro vengono. Per ognuna scegli tra due risposte, poi scopri subito se hai indovinato.</p>
 <ul><li>Gratis e senza registrazione</li><li>Dura circa due minuti</li><li>Alla fine vedi il tuo punteggio</li></ul>
-<button class="start" id="start" type="button">Fai il test</button>
+<button class="start" id="start" type="button" data-umami-event="inizio-test">Fai il test</button>
 </div>
 
 <div class="card" id="quiz" hidden>
@@ -68,7 +69,7 @@ h1{font-size:1.7rem;line-height:1.2;margin:.2em 0 .3em;text-align:center}
 <p class="punti" id="punti"></p>
 <p id="commento" style="text-align:center"></p>
 <p style="text-align:center">Nell'app trovi le frasi celebri di La coscienza di Zeno e di oltre 130 altri classici, con la traduzione in italiano. Tutte le frasi celebri sono incluse nella versione gratuita.</p>
-<a class="cta" href="https://books.sebugi.com/?lang=it" id="cta">Entra nell'app e continua a giocare</a>
+<a class="cta" href="https://books.sebugi.com/?lang=it" id="cta" data-umami-event="entra-app">Entra nell'app e continua a giocare</a>
 <button class="avanti" id="ripeti" type="button" style="background:#fff;color:#3b2f22;border:1px solid #cdb98f">Rifai il quiz</button>
 </div>
 
@@ -113,7 +114,7 @@ function scegli(b,t){
 el("avanti").onclick=function(){
   i++;
   if(i<5){mostra();return}
-  el("quiz").hidden=true;el("fine").hidden=false;
+  el("quiz").hidden=true;el("fine").hidden=false;if(window.umami)umami.track("fine-test",{punti:punti});
   el("punti").textContent="Ne hai riconosciute "+punti+" su 5";
   el("commento").textContent=punti>=4?"Ottimo, conosci bene questo libro e i suoi compagni di scaffale.":punti>=2?"Buon risultato. C'è ancora molto da scoprire.":"Si impara giocando: ogni frase nuova è una da ricordare."
 };
