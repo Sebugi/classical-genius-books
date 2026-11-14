@@ -32,6 +32,12 @@ h1{font-size:1.7rem;line-height:1.2;margin:.2em 0 .3em;text-align:center}
 .piede{text-align:center;font-size:.8rem;color:#7a6a55;margin-top:26px}
 .piede a{color:#7a6a55}
 [hidden]{display:none!important}
+.intro{text-align:center}
+.intro h2{font-size:1.15rem;margin:0 0 8px}
+.intro p{margin:0 0 10px}
+.intro ul{list-style:none;padding:0;margin:0 0 14px;color:#6b5b47;font-size:.95rem}
+.start{display:block;width:100%;padding:20px 14px;margin-top:6px;font:inherit;font-weight:bold;font-size:1.5rem;color:#fff;background:linear-gradient(#5d8a4a,#46703a);border:0;border-radius:12px;cursor:pointer;box-shadow:0 3px 0 #2f5226}
+.start:active{transform:translateY(2px);box-shadow:0 1px 0 #2f5226}
 </style>
 </head>
 <body>
@@ -40,7 +46,14 @@ h1{font-size:1.7rem;line-height:1.2;margin:.2em 0 .3em;text-align:center}
 <h1>Conosci davvero I promessi sposi?</h1>
 <p class="sotto">Cinque frasi: sono dei Promessi sposi o di un altro grande romanzo italiano?</p>
 
-<div class="card" id="quiz">
+<div class="card intro" id="intro">
+<h2>Che cos'è questo test?</h2>
+<p>Un gioco gratuito di due minuti: leggi cinque frasi e indovina da quale libro vengono. Per ognuna scegli tra due risposte, poi scopri subito se hai indovinato.</p>
+<ul><li>Gratis e senza registrazione</li><li>Dura circa due minuti</li><li>Alla fine vedi il tuo punteggio</li></ul>
+<button class="start" id="start" type="button">Fai il test</button>
+</div>
+
+<div class="card" id="quiz" hidden>
 <p class="num">Frase <span id="n">1</span> di 5</p>
 <p class="frase" id="frase"></p>
 <div id="opzioni"></div>
@@ -105,6 +118,7 @@ el("avanti").onclick=function(){
   el("commento").textContent=punti>=4?"Ottimo, conosci bene questo libro e i suoi compagni di scaffale.":punti>=2?"Buon risultato. C'è ancora molto da scoprire.":"Si impara giocando: ogni frase nuova è una da ricordare."
 };
 el("ripeti").onclick=function(){el("fine").hidden=true;el("quiz").hidden=false;prepara();mostra()};
+el("start").onclick=function(){el("intro").hidden=true;el("quiz").hidden=false;window.scrollTo(0,0)};
 prepara();mostra();
 </script>
 </body>
