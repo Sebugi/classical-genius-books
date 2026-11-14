@@ -11,7 +11,7 @@ const el = id => document.getElementById(id);
 // ---------- Lingua dell'interfaccia ----------
 const TESTI = {
     it: {sottotitolo:'Riconosci il libro dalle sue parole', scegli:'Scegli come vuoi giocare', livello:'Livello',
-        suggerimento:'Tocca per scegliere, anche più di uno. Se non scegli niente, vanno bene tutti.',
+        suggerimento:'Tocca per scegliere nazione, autore e libro, anche più di uno. Se non scegli niente, ricevi domande a caso da tutti i libri.',
         tutteFrasi:'Tutte le frasi', celebri:'Frasi celebri', resto:'Resto del libro', genere:'Genere', nazione:'Nazione', autore:'Autore',
         libro:'Libro', gioca:'Inizia a giocare', giocaSubito:'Inizia a giocare se non vuoi scegliere niente',
         fPrivacy:'Privacy', fTermini:"Condizioni d'uso", fAvviso:'Non affiliazione',
@@ -25,7 +25,7 @@ const TESTI = {
         ripassa:'Ripassa le tue risposte', ripassaNota:'Scegli quali frasi rivedere.', cancellaVoti:'Cancella le mie risposte',
         confermaCancella:'Vuoi cancellare tutte le tue risposte salvate? Non si può annullare.', nessunaCat:'Non ci sono frasi in questa categoria.'},
     en: {sottotitolo:'Recognise the book from its words', scegli:'Choose how to play', livello:'Level',
-        suggerimento:"Tap to choose, as many as you like. If you choose nothing, everything is included.",
+        suggerimento:"Tap to pick a country, author and book, as many as you like. If you pick nothing, you get random questions from all the books.",
         tutteFrasi:'All phrases', celebri:'Famous quotes', resto:'Rest of the book', genere:'Genre', nazione:'Country', autore:'Author',
         libro:'Book', gioca:'Start playing', giocaSubito:"Start playing if you don't want to choose anything",
         fPrivacy:'Privacy', fTermini:'Terms of use', fAvviso:'Disclaimer',
@@ -39,7 +39,7 @@ const TESTI = {
         ripassa:'Review your answers', ripassaNota:'Choose which phrases to see again.', cancellaVoti:'Delete my answers',
         confermaCancella:'Delete all your saved answers? This cannot be undone.', nessunaCat:'There are no phrases in this category.'},
     de: {sottotitolo:'Erkenne das Buch an seinen Worten', scegli:'Wähle, wie du spielen möchtest', livello:'Stufe',
-        suggerimento:'Tippe zum Auswählen, auch mehrere. Wenn du nichts wählst, ist alles dabei.',
+        suggerimento:'Tippe, um Land, Autor und Buch zu wählen, auch mehrere. Wenn du nichts wählst, bekommst du zufällige Fragen aus allen Büchern.',
         tutteFrasi:'Alle Sätze', celebri:'Berühmte Zitate', resto:'Rest des Buches', genere:'Genre', nazione:'Land', autore:'Autor',
         libro:'Buch', gioca:'Spiel starten', giocaSubito:'Spiel starten, wenn du nichts auswählen möchtest',
         fPrivacy:'Privacy', fTermini:'Terms of use', fAvviso:'Disclaimer',
