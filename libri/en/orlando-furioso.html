@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="theme-color" content="#f5eddc">
+    <title>Orlando Furioso: famous quotes and quiz | Sebugi Books</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="../../favicon-32.png">
+    <link rel="apple-touch-icon" href="../../favicon-192.png">
+    <meta name="description" content="The most famous lines of Orlando Furioso by Ludovico Ariosto. Test how well you know the book with a 10-phrase quiz.">
+    <link rel="canonical" href="https://books.sebugi.com/libri/en/orlando-furioso.html">
+    <link rel="alternate" hreflang="it" href="https://books.sebugi.com/libri/orlando-furioso.html">
+    <link rel="alternate" hreflang="en" href="https://books.sebugi.com/libri/en/orlando-furioso.html">
+    <meta property="og:title" content="Orlando Furioso: famous quotes and quiz">
+    <meta property="og:description" content="How well do you know Orlando Furioso? Recognise its lines among those of other great novels.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://books.sebugi.com/libri/en/orlando-furioso.html">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../style.css?v=8">
+</head>
+<body data-libro="Orlando furioso" data-titolo="Orlando Furioso" data-dati="../../data/frasi.json">
+
+    <div id="schermata-gioco">
+        <header>
+            <a id="link-home" href="index.html">&larr; Books</a>
+            <h1>Sebugi Books</h1>
+        </header>
+
+        <main>
+            <p class="lang-riga"><a class="lang-link" href="../orlando-furioso.html" hreflang="it">Italiano</a></p>
+            <section class="presentazione">
+                <h2>Orlando Furioso</h2>
+                <p class="sotto">Ludovico Ariosto, 1516 · Poetry</p>
+                <p>Ariosto&#x27;s chivalric poem: love for Angelica drives Orlando mad, amid duels, enchantments, a journey to the Moon and the epic of Ruggiero and Bradamante. How many do you recognise? Ten phrases: some are from this book, others from other great books. Try to guess the book for each one, then reveal the answer and rate yourself honestly.</p>
+            </section>
+
+            <div id="quiz">
+                <div id="card-frase">
+                    <p id="info-frase">Phrase <span id="numero">1</span> of <span id="totale">10</span></p>
+                    <p id="testo-frase"></p>
+                </div>
+
+                <button id="btn-mostra-risposta" style="display:none;">Show answer</button>
+
+                <div id="risposta" style="display:none;">
+                    <div id="illustrazione"></div>
+                    <h2 id="titolo-risposta"></h2>
+                    <p id="autore-risposta"></p>
+                    <span id="genere-risposta"></span>
+                    <p id="nota-libro" class="nota-libro"></p>
+                    <p id="traduzione-risposta"></p>
+
+                    <div id="bottoni-anki">
+                        <button class="anki-btn" id="btn-corretto">Correct</button>
+                        <button class="anki-btn" id="btn-insicuro">Unsure</button>
+                        <button class="anki-btn" id="btn-sbagliato">Wrong</button>
+                        <button class="anki-btn" id="btn-nonricordo">I forgot it</button>
+                        <button class="anki-btn" id="btn-nonsapevo">I didn't know</button>
+                    </div>
+                </div>
+
+                <div id="fine" style="display:none;">
+                    <h2 id="punteggio"></h2>
+                    <p id="commento-fine"></p>
+                    <a class="bottone-principale" href="../../index.html?lang=en">Play with all 138 books</a>
+                    <button id="btn-ricomincia">Try again</button>
+                </div>
+
+                <aside id="statistiche" style="display:none;" aria-live="polite">
+                    <h3 id="stat-titolo"></h3>
+                    <div id="stat-grafico"></div>
+                </aside>
+            </div>
+
+            <section class="citazioni">
+                <h2>Famous quotes from Orlando Furioso</h2>
+                <p class="sotto">Original English text.</p>
+                <blockquote>
+                    <p class="en">Le donne, i cavallier, l’arme, gli amori, / le cortesie, l’audaci imprese io canto, / che furo al tempo che passaro i Mori / d’Africa il mare, e in Francia nocquer tanto,</p>
+                    <p class="it">Of ladies, knights, arms, loves, courtesies and bold deeds I sing, which were in the time when the Moors crossed the sea from Africa and did such harm in France.</p>
+                </blockquote>
+                <blockquote>
+                    <p class="en">Chi mette il piè su l’amorosa pania, / cerchi ritrarlo, e non v’inveschi l’ale; / che non è in somma amor, se non insania, / a giudizio de’ savi universale:</p>
+                    <p class="it">Whoever sets foot on the sticky lime of love, let him try to draw it back and not entangle his wings; for love is in sum nothing but madness, in the universal judgment of the wise.</p>
+                </blockquote>
+                <blockquote>
+                    <p class="en">Orlando, che gran tempo inamorato / fu de la bella Angelica, e per lei / in India, in Media, in Tartaria lasciato / avea infiniti et immortal trofei,</p>
+                    <p class="it">Orlando, who for a long time was in love with beautiful Angelica, and for her in India, Media and Tartary had left infinite and immortal trophies.</p>
+                </blockquote>
+            </section>
+
+            <section class="invito">
+                <p>The full quiz has 138 novels, Gothic books, poems and essays in the original language, with famous quotes and many more phrases taken from the whole text.</p>
+                <a class="bottone-principale" href="../../index.html?lang=en">Try the full quiz</a>
+            </section>
+        </main>
+    </div>
+
+    <script src="../../illustrazioni.js?v=8"></script>
+    <script src="../../libro.js?v=8"></script>
+</body>
+</html>

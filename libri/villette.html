@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="theme-color" content="#f5eddc">
+    <title>Villette: frasi celebri e quiz | Sebugi Books</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32.png">
+    <link rel="apple-touch-icon" href="../favicon-192.png">
+    <meta name="description" content="Le frasi più celebri di Villette di Charlotte Brontë, in inglese con traduzione italiana. Metti alla prova quanto conosci il libro con un quiz di 10 frasi.">
+    <link rel="canonical" href="https://books.sebugi.com/libri/villette.html">
+    <link rel="alternate" hreflang="it" href="https://books.sebugi.com/libri/villette.html">
+    <link rel="alternate" hreflang="en" href="https://books.sebugi.com/libri/en/villette.html">
+    <meta property="og:title" content="Villette: frasi celebri e quiz">
+    <meta property="og:description" content="Quanto conosci Villette? Riconosci le sue frasi tra quelle di altri grandi romanzi.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://books.sebugi.com/libri/villette.html">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css?v=8">
+</head>
+<body data-libro="Villette" data-titolo="Villette" data-dati="../data/frasi.json">
+
+    <div id="schermata-gioco">
+        <header>
+            <a id="link-home" href="index.html">&larr; Libri</a>
+            <h1>Sebugi Books</h1>
+        </header>
+
+        <main>
+            <p class="lang-riga"><a class="lang-link" href="../en/villette.html" hreflang="en">English</a></p>
+            <section class="presentazione">
+                <h2>Villette</h2>
+                <p class="sotto">Charlotte Brontë, 1853 · Romanzo</p>
+                <p>Lucy Snowe, sola e riservata, va a insegnare in una città straniera: un romanzo intenso sulla solitudine e sul bisogno d&#x27;amore. Quante riconosci? Dieci frasi: alcune sono di questo libro, altre di altri grandi libri. Per ognuna prova a indovinare il libro, poi gira la carta e dì onestamente come è andata.</p>
+            </section>
+
+            <div id="quiz">
+                <div id="card-frase">
+                    <p id="info-frase">Frase <span id="numero">1</span> di <span id="totale">10</span></p>
+                    <p id="testo-frase"></p>
+                </div>
+
+                <button id="btn-mostra-risposta" style="display:none;">Mostra risposta</button>
+
+                <div id="risposta" style="display:none;">
+                    <div id="illustrazione"></div>
+                    <h2 id="titolo-risposta"></h2>
+                    <p id="autore-risposta"></p>
+                    <span id="genere-risposta"></span>
+                    <p id="nota-libro" class="nota-libro"></p>
+                    <p id="traduzione-risposta"></p>
+
+                    <div id="bottoni-anki">
+                        <button class="anki-btn" id="btn-corretto">Corretto</button>
+                        <button class="anki-btn" id="btn-insicuro">Insicuro</button>
+                        <button class="anki-btn" id="btn-sbagliato">Sbagliato</button>
+                        <button class="anki-btn" id="btn-nonricordo">Non ricordavo</button>
+                        <button class="anki-btn" id="btn-nonsapevo">Non lo sapevo</button>
+                    </div>
+                </div>
+
+                <div id="fine" style="display:none;">
+                    <h2 id="punteggio"></h2>
+                    <p id="commento-fine"></p>
+                    <a class="bottone-principale" href="../index.html">Gioca con tutti i 138 libri</a>
+                    <button id="btn-ricomincia">Rifai il quiz</button>
+                </div>
+
+                <aside id="statistiche" style="display:none;" aria-live="polite">
+                    <h3 id="stat-titolo"></h3>
+                    <div id="stat-grafico"></div>
+                </aside>
+            </div>
+
+            <section class="citazioni">
+                <h2>Frasi da Villette</h2>
+                <p class="sotto">Alcune frasi dal testo originale in inglese, con traduzione italiana dove disponibile.</p>
+                <blockquote>
+                    <p class="en">My godmother lived in a handsome house in the clean and ancient town of Bretton.</p>
+                    <p class="it">La mia madrina viveva in una bella casa nella pulita e antica città di Bretton.</p>
+                </blockquote>
+                <blockquote>
+                    <p class="en">Here pause: pause at once. There is enough said.</p>
+                    <p class="it">Qui fermiamoci: fermiamoci subito. Si è detto abbastanza.</p>
+                </blockquote>
+                <blockquote>
+                    <p class="en">The shape of a letter similar to that had haunted my brain in its very core for seven days past.</p>
+                    <p class="it">La forma di una lettera simile a quella mi tormentava il cervello fin nel profondo da sette giorni.</p>
+                </blockquote>
+                <blockquote>
+                    <p class="en">Tomorrow I will venture to put some questions respecting the cause of her loss of health.</p>
+                    <p class="it">Domani mi azzarderò a farle qualche domanda sulla causa del suo deperimento.</p>
+                </blockquote>
+                <blockquote>
+                    <p class="en">Once, upon his preferring such an accusation, I turned upon him—I rose against him.</p>
+                    <p class="it">Una volta, quando mi rivolse quell&#x27;accusa, mi voltai verso di lui, mi levai contro di lui.</p>
+                </blockquote>
+            </section>
+
+            <section class="invito">
+                <p>Il quiz completo ha 138 romanzi, libri gotici, poesie e saggi in lingua originale, con le frasi celebri e tante altre prese da tutto il testo.</p>
+                <a class="bottone-principale" href="../index.html">Prova il quiz completo</a>
+            </section>
+        </main>
+    </div>
+
+    <script src="../illustrazioni.js?v=8"></script>
+    <script src="../libro.js?v=8"></script>
+</body>
+</html>

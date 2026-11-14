@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="theme-color" content="#f5eddc">
+    <title>Cranford: frasi celebri e quiz | Sebugi Books</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32.png">
+    <link rel="apple-touch-icon" href="../favicon-192.png">
+    <meta name="description" content="Le frasi più celebri di Cranford di Elizabeth Gaskell, in inglese con traduzione italiana. Metti alla prova quanto conosci il libro con un quiz di 10 frasi.">
+    <link rel="canonical" href="https://books.sebugi.com/libri/cranford.html">
+    <link rel="alternate" hreflang="it" href="https://books.sebugi.com/libri/cranford.html">
+    <link rel="alternate" hreflang="en" href="https://books.sebugi.com/libri/en/cranford.html">
+    <meta property="og:title" content="Cranford: frasi celebri e quiz">
+    <meta property="og:description" content="Quanto conosci Cranford? Riconosci le sue frasi tra quelle di altri grandi romanzi.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://books.sebugi.com/libri/cranford.html">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css?v=8">
+</head>
+<body data-libro="Cranford" data-titolo="Cranford" data-dati="../data/frasi.json">
+
+    <div id="schermata-gioco">
+        <header>
+            <a id="link-home" href="index.html">&larr; Libri</a>
+            <h1>Sebugi Books</h1>
+        </header>
+
+        <main>
+            <p class="lang-riga"><a class="lang-link" href="../en/cranford.html" hreflang="en">English</a></p>
+            <section class="presentazione">
+                <h2>Cranford</h2>
+                <p class="sotto">Elizabeth Gaskell, 1853 · Romanzo</p>
+                <p>Una piccola cittadina abitata soprattutto da signore, fra tè, pettegolezzi e solidarietà: un ritratto affettuoso e pieno di humour. Quante riconosci? Dieci frasi: alcune sono di questo libro, altre di altri grandi libri. Per ognuna prova a indovinare il libro, poi gira la carta e dì onestamente come è andata.</p>
+            </section>
+
+            <div id="quiz">
+                <div id="card-frase">
+                    <p id="info-frase">Frase <span id="numero">1</span> di <span id="totale">10</span></p>
+                    <p id="testo-frase"></p>
+                </div>
+
+                <button id="btn-mostra-risposta" style="display:none;">Mostra risposta</button>
+
+                <div id="risposta" style="display:none;">
+                    <div id="illustrazione"></div>
+                    <h2 id="titolo-risposta"></h2>
+                    <p id="autore-risposta"></p>
+                    <span id="genere-risposta"></span>
+                    <p id="nota-libro" class="nota-libro"></p>
+                    <p id="traduzione-risposta"></p>
+
+                    <div id="bottoni-anki">
+                        <button class="anki-btn" id="btn-corretto">Corretto</button>
+                        <button class="anki-btn" id="btn-insicuro">Insicuro</button>
+                        <button class="anki-btn" id="btn-sbagliato">Sbagliato</button>
+                        <button class="anki-btn" id="btn-nonricordo">Non ricordavo</button>
+                        <button class="anki-btn" id="btn-nonsapevo">Non lo sapevo</button>
+                    </div>
+                </div>
+
+                <div id="fine" style="display:none;">
+                    <h2 id="punteggio"></h2>
+                    <p id="commento-fine"></p>
+                    <a class="bottone-principale" href="../index.html">Gioca con tutti i 138 libri</a>
+                    <button id="btn-ricomincia">Rifai il quiz</button>
+                </div>
+
+                <aside id="statistiche" style="display:none;" aria-live="polite">
+                    <h3 id="stat-titolo"></h3>
+                    <div id="stat-grafico"></div>
+                </aside>
+            </div>
+
+            <section class="citazioni">
+                <h2>Frasi da Cranford</h2>
+                <p class="sotto">Alcune frasi dal testo originale in inglese, con traduzione italiana dove disponibile.</p>
+                <blockquote>
+                    <p class="en">In the first place, Cranford is in possession of the Amazons; all the holders of houses above a certain rent are women.</p>
+                    <p class="it">Prima di tutto, Cranford è in possesso delle Amazzoni: tutti i proprietari di case oltre un certo affitto sono donne.</p>
+                </blockquote>
+                <blockquote>
+                    <p class="en">What does it signify how we dress here at Cranford, where everybody knows us?</p>
+                    <p class="it">Che importanza ha come ci vestiamo qui a Cranford, dove tutti ci conoscono?</p>
+                </blockquote>
+                <blockquote>
+                    <p class="en">The shopman whispered a word or two across the table to Miss Matty.</p>
+                    <p class="it">Il commesso sussurrò una parola o due a Miss Matty oltre il tavolo.</p>
+                </blockquote>
+                <blockquote>
+                    <p class="en">Miss Matty had forgotten her silk gown in her interest for the man.</p>
+                    <p class="it">Miss Matty aveva dimenticato il suo vestito di seta per l&#x27;interesse verso quell&#x27;uomo.</p>
+                </blockquote>
+                <blockquote>
+                    <p class="en">The horror of that new thought—our bright, darling Peter, cold, and stark, and dead!</p>
+                    <p class="it">L&#x27;orrore di quel nuovo pensiero: il nostro caro, luminoso Peter, freddo, rigido e morto!</p>
+                </blockquote>
+            </section>
+
+            <section class="invito">
+                <p>Il quiz completo ha 138 romanzi, libri gotici, poesie e saggi in lingua originale, con le frasi celebri e tante altre prese da tutto il testo.</p>
+                <a class="bottone-principale" href="../index.html">Prova il quiz completo</a>
+            </section>
+        </main>
+    </div>
+
+    <script src="../illustrazioni.js?v=8"></script>
+    <script src="../libro.js?v=8"></script>
+</body>
+</html>

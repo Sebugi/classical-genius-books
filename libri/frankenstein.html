@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="theme-color" content="#f5eddc">
+    <title>Frankenstein: frasi celebri e quiz | Sebugi Books</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32.png">
+    <link rel="apple-touch-icon" href="../favicon-192.png">
+    <meta name="description" content="Le frasi più celebri di Frankenstein di Mary Shelley, in inglese con traduzione italiana. Metti alla prova quanto conosci il libro con un quiz di 10 frasi.">
+    <link rel="canonical" href="https://books.sebugi.com/libri/frankenstein.html">
+    <link rel="alternate" hreflang="it" href="https://books.sebugi.com/libri/frankenstein.html">
+    <link rel="alternate" hreflang="en" href="https://books.sebugi.com/libri/en/frankenstein.html">
+    <meta property="og:title" content="Frankenstein: frasi celebri e quiz">
+    <meta property="og:description" content="Quanto conosci Frankenstein? Riconosci le sue frasi tra quelle di altri grandi romanzi.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://books.sebugi.com/libri/frankenstein.html">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css?v=8">
+</head>
+<body data-libro="Frankenstein" data-titolo="Frankenstein" data-dati="../data/frasi.json">
+
+    <div id="schermata-gioco">
+        <header>
+            <a id="link-home" href="index.html">&larr; Libri</a>
+            <h1>Sebugi Books</h1>
+        </header>
+
+        <main>
+            <p class="lang-riga"><a class="lang-link" href="../en/frankenstein.html" hreflang="en">English</a></p>
+            <section class="presentazione">
+                <h2>Frankenstein</h2>
+                <p class="sotto">Mary Shelley, 1818 · Gotico</p>
+                <p>Lo scienziato Victor Frankenstein dà vita a una creatura e ne affronta le conseguenze: un romanzo sui limiti della scienza e sulla responsabilità. Quante riconosci? Dieci frasi: alcune sono di questo libro, altre di altri grandi libri. Per ognuna prova a indovinare il libro, poi gira la carta e dì onestamente come è andata.</p>
+            </section>
+
+            <div id="quiz">
+                <div id="card-frase">
+                    <p id="info-frase">Frase <span id="numero">1</span> di <span id="totale">10</span></p>
+                    <p id="testo-frase"></p>
+                </div>
+
+                <button id="btn-mostra-risposta" style="display:none;">Mostra risposta</button>
+
+                <div id="risposta" style="display:none;">
+                    <div id="illustrazione"></div>
+                    <h2 id="titolo-risposta"></h2>
+                    <p id="autore-risposta"></p>
+                    <span id="genere-risposta"></span>
+                    <p id="nota-libro" class="nota-libro"></p>
+                    <p id="traduzione-risposta"></p>
+
+                    <div id="bottoni-anki">
+                        <button class="anki-btn" id="btn-corretto">Corretto</button>
+                        <button class="anki-btn" id="btn-insicuro">Insicuro</button>
+                        <button class="anki-btn" id="btn-sbagliato">Sbagliato</button>
+                        <button class="anki-btn" id="btn-nonricordo">Non ricordavo</button>
+                        <button class="anki-btn" id="btn-nonsapevo">Non lo sapevo</button>
+                    </div>
+                </div>
+
+                <div id="fine" style="display:none;">
+                    <h2 id="punteggio"></h2>
+                    <p id="commento-fine"></p>
+                    <a class="bottone-principale" href="../index.html">Gioca con tutti i 138 libri</a>
+                    <button id="btn-ricomincia">Rifai il quiz</button>
+                </div>
+
+                <aside id="statistiche" style="display:none;" aria-live="polite">
+                    <h3 id="stat-titolo"></h3>
+                    <div id="stat-grafico"></div>
+                </aside>
+            </div>
+
+            <section class="citazioni">
+                <h2>Le frasi celebri di Frankenstein</h2>
+                <p class="sotto">In inglese, con traduzione italiana.</p>
+                <blockquote>
+                    <p class="en">I am malicious because I am miserable.</p>
+                    <p class="it">Sono malvagio perché sono infelice.</p>
+                </blockquote>
+                <blockquote>
+                    <p class="en">Remember, that I am thy creature; I ought to be thy Adam; but I am rather the fallen angel</p>
+                    <p class="it">Ricordati che io sono la tua creatura; dovrei essere il tuo Adamo, ma sono piuttosto l&#x27;angelo caduto</p>
+                </blockquote>
+                <blockquote>
+                    <p class="en">Beware; for I am fearless, and therefore powerful.</p>
+                    <p class="it">Guardati: io non temo niente, e perciò sono potente.</p>
+                </blockquote>
+                <blockquote>
+                    <p class="en">Learn from me, if not by my precepts, at least by my example, how dangerous is the acquirement of knowledge</p>
+                    <p class="it">Imparate da me, se non dai miei precetti almeno dal mio esempio, quanto sia pericoloso l&#x27;acquisto della conoscenza</p>
+                </blockquote>
+                <blockquote>
+                    <p class="en">Life, although it may only be an accumulation of anguish, is dear to me, and I will defend it.</p>
+                    <p class="it">La vita, anche se può essere soltanto un cumulo di angosce, mi è cara, e la difenderò.</p>
+                </blockquote>
+                <blockquote>
+                    <p class="en">Nothing is so painful to the human mind as a great and sudden change.</p>
+                    <p class="it">Niente è tanto doloroso per la mente umana quanto un cambiamento grande e improvviso.</p>
+                </blockquote>
+                <blockquote>
+                    <p class="en">It was on a dreary night of November, that I beheld the accomplishment of my toils.</p>
+                    <p class="it">Era una cupa notte di novembre quando vidi il compimento delle mie fatiche.</p>
+                </blockquote>
+            </section>
+
+            <section class="invito">
+                <p>Il quiz completo ha 138 romanzi, libri gotici, poesie e saggi in lingua originale, con le frasi celebri e tante altre prese da tutto il testo.</p>
+                <a class="bottone-principale" href="../index.html">Prova il quiz completo</a>
+            </section>
+        </main>
+    </div>
+
+    <script src="../illustrazioni.js?v=8"></script>
+    <script src="../libro.js?v=8"></script>
+</body>
+</html>

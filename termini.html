@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Condizioni d'uso / Terms of use - Sebugi</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+    <link rel="apple-touch-icon" href="favicon-192.png">
+<style>
+body{font-family:Georgia,serif;background:#f5eddc;color:#2b1d0e;max-width:720px;margin:0 auto;padding:24px 18px 60px;line-height:1.6}
+h1{font-size:1.6em;border-bottom:1px solid #b89b6a;padding-bottom:8px}
+h2{font-size:1.15em;margin-top:1.6em}
+hr{border:0;border-top:1px solid #b89b6a;margin:2.5em 0}
+a{color:#1f4a3a}
+small{color:#5a4630}
+</style>
+</head>
+<body>
+<p><a href="./">&larr; Home</a></p>
+<div id="blocco-it">
+<h1>Condizioni d'uso</h1>
+<p><small>Ultimo aggiornamento: 13 novembre 2026</small></p>
+
+<h2>Uso dell'app</h2>
+<p>Le app Sebugi sono quiz a scopo di intrattenimento e di studio. Puoi usarle gratuitamente per uso personale. Non è consentito copiare in modo sistematico i contenuti, estrarli con strumenti automatici o rivenderli.</p>
+<h2>Contenuti</h2>
+<p>I testi letterari usati nei quiz provengono da opere il cui diritto d'autore è scaduto (nell'Unione europea, di regola, 70 anni dopo la morte dell'autore). Le traduzioni mostrate nell'interfaccia sono generate automaticamente a partire dagli originali e possono contenere imprecisioni. Il design, le illustrazioni, il software e l'organizzazione dei contenuti appartengono a Sebugi.</p>
+<h2>Nessuna garanzia</h2>
+<p>L'app è fornita così com'è. Facciamo il possibile per mantenerla corretta e disponibile, ma non garantiamo che sia priva di errori o sempre raggiungibile. Nei limiti consentiti dalla legge, non rispondiamo di danni derivanti dall'uso o dal mancato uso dell'app. Restano ferme le tutele di legge a favore dei consumatori.</p>
+<h2>Funzioni a pagamento</h2>
+<p>Se verranno introdotte funzioni a pagamento, prezzi, durata, rinnovo e diritto di recesso saranno indicati prima dell'acquisto. Per i contenuti digitali ti chiederemo il consenso a riceverli subito e ti avviseremo che, una volta iniziata la fornitura, perdi il diritto di recesso di 14 giorni. A queste condizioni si aggiungeranno quelle del servizio di pagamento.</p>
+<h2>Contatti</h2>
+<p>Per qualsiasi domanda: <a href="mailto:sebugi.app@gmail.com">sebugi.app@gmail.com</a>.</p>
+
+</div>
+<hr id="separatore">
+<div id="blocco-en">
+<h1>Terms of use</h1>
+<p><small>Last updated: 13 November 2026</small></p>
+
+<h2>Using the app</h2>
+<p>Sebugi apps are quizzes for entertainment and study. You may use them free of charge for personal use. You may not systematically copy the content, extract it with automated tools or resell it.</p>
+<h2>Content</h2>
+<p>The literary texts used in the quizzes come from works whose copyright has expired (in the European Union, as a rule, 70 years after the author's death). Translations shown in the interface are generated automatically from the originals and may contain inaccuracies. The design, illustrations, software and arrangement of the content belong to Sebugi.</p>
+<h2>No warranty</h2>
+<p>The app is provided as is. We do our best to keep it accurate and available, but we do not guarantee that it is error-free or always reachable. To the extent permitted by law, we are not liable for damages arising from use of, or inability to use, the app. Your statutory consumer rights remain unaffected.</p>
+<h2>Paid features</h2>
+<p>If paid features are introduced, prices, duration, renewal and right of withdrawal will be stated before purchase. For digital content we will ask for your consent to receive it immediately and will tell you that, once delivery has started, you lose the 14-day right of withdrawal. The payment provider's terms will apply in addition to these.</p>
+<h2>Contact</h2>
+<p>For any question: <a href="mailto:sebugi.app@gmail.com">sebugi.app@gmail.com</a>.</p>
+
+</div>
+<script>
+(function () {
+    var lang = 'it';
+    try { lang = localStorage.getItem('cgb-ui') || 'it'; } catch (e) {}
+    try { var l = new URLSearchParams(location.search).get('lang'); if (l) lang = l; } catch (e) {}
+    if (lang !== 'it') {
+        var it = document.getElementById('blocco-it');
+        var sep = document.getElementById('separatore');
+        if (it) it.style.display = 'none';
+        if (sep) sep.style.display = 'none';
+        document.documentElement.lang = 'en';
+    }
+})();
+</script>
+</body>
+</html>

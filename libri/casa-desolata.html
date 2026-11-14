@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="theme-color" content="#f5eddc">
+    <title>Casa desolata: frasi celebri e quiz | Sebugi Books</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32.png">
+    <link rel="apple-touch-icon" href="../favicon-192.png">
+    <meta name="description" content="Le frasi più celebri di Casa desolata (Bleak House) di Charles Dickens, in inglese con traduzione italiana. Metti alla prova quanto conosci il libro con un quiz di 10 frasi.">
+    <link rel="canonical" href="https://books.sebugi.com/libri/casa-desolata.html">
+    <link rel="alternate" hreflang="it" href="https://books.sebugi.com/libri/casa-desolata.html">
+    <link rel="alternate" hreflang="en" href="https://books.sebugi.com/libri/en/bleak-house.html">
+    <meta property="og:title" content="Casa desolata: frasi celebri e quiz">
+    <meta property="og:description" content="Quanto conosci Casa desolata? Riconosci le sue frasi tra quelle di altri grandi romanzi.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://books.sebugi.com/libri/casa-desolata.html">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css?v=8">
+</head>
+<body data-libro="Bleak House" data-titolo="Casa desolata" data-dati="../data/frasi.json">
+
+    <div id="schermata-gioco">
+        <header>
+            <a id="link-home" href="index.html">&larr; Libri</a>
+            <h1>Sebugi Books</h1>
+        </header>
+
+        <main>
+            <p class="lang-riga"><a class="lang-link" href="../en/bleak-house.html" hreflang="en">English</a></p>
+            <section class="presentazione">
+                <h2>Casa desolata</h2>
+                <p class="sotto">Bleak House, Charles Dickens, 1853 · Romanzo</p>
+                <p>Una causa ereditaria interminabile al tribunale di Londra intreccia decine di destini, fra nebbia, misteri e satira sociale. Quante riconosci? Dieci frasi: alcune sono di questo libro, altre di altri grandi libri. Per ognuna prova a indovinare il libro, poi gira la carta e dì onestamente come è andata.</p>
+            </section>
+
+            <div id="quiz">
+                <div id="card-frase">
+                    <p id="info-frase">Frase <span id="numero">1</span> di <span id="totale">10</span></p>
+                    <p id="testo-frase"></p>
+                </div>
+
+                <button id="btn-mostra-risposta" style="display:none;">Mostra risposta</button>
+
+                <div id="risposta" style="display:none;">
+                    <div id="illustrazione"></div>
+                    <h2 id="titolo-risposta"></h2>
+                    <p id="autore-risposta"></p>
+                    <span id="genere-risposta"></span>
+                    <p id="nota-libro" class="nota-libro"></p>
+                    <p id="traduzione-risposta"></p>
+
+                    <div id="bottoni-anki">
+                        <button class="anki-btn" id="btn-corretto">Corretto</button>
+                        <button class="anki-btn" id="btn-insicuro">Insicuro</button>
+                        <button class="anki-btn" id="btn-sbagliato">Sbagliato</button>
+                        <button class="anki-btn" id="btn-nonricordo">Non ricordavo</button>
+                        <button class="anki-btn" id="btn-nonsapevo">Non lo sapevo</button>
+                    </div>
+                </div>
+
+                <div id="fine" style="display:none;">
+                    <h2 id="punteggio"></h2>
+                    <p id="commento-fine"></p>
+                    <a class="bottone-principale" href="../index.html">Gioca con tutti i 138 libri</a>
+                    <button id="btn-ricomincia">Rifai il quiz</button>
+                </div>
+
+                <aside id="statistiche" style="display:none;" aria-live="polite">
+                    <h3 id="stat-titolo"></h3>
+                    <div id="stat-grafico"></div>
+                </aside>
+            </div>
+
+            <section class="citazioni">
+                <h2>Le frasi celebri di Casa desolata</h2>
+                <p class="sotto">In inglese, con traduzione italiana.</p>
+                <blockquote>
+                    <p class="en">Fog everywhere.</p>
+                    <p class="it">Nebbia dappertutto.</p>
+                </blockquote>
+                <blockquote>
+                    <p class="en">London. Michaelmas term lately over, and the Lord Chancellor sitting in Lincoln’s Inn Hall.</p>
+                    <p class="it">Londra. La sessione di San Michele è appena finita e il Lord Cancelliere siede nella Sala di Lincoln&#x27;s Inn.</p>
+                </blockquote>
+                <blockquote>
+                    <p class="en">London. Michaelmas term lately over, and the Lord Chancellor sitting in Lincoln’s Inn Hall. Implacable November weather.</p>
+                    <p class="it">Londra. Il periodo giudiziario di san Michele è appena finito e il Lord Cancelliere siede nell&#x27;aula di Lincoln&#x27;s Inn. Tempo di novembre implacabile.</p>
+                </blockquote>
+                <blockquote>
+                    <p class="en">The one great principle of the English law is to make business for itself.</p>
+                    <p class="it">L&#x27;unico grande principio della legge inglese è fare lavoro per se stessa.</p>
+                </blockquote>
+            </section>
+
+            <section class="invito">
+                <p>Il quiz completo ha 138 romanzi, libri gotici, poesie e saggi in lingua originale, con le frasi celebri e tante altre prese da tutto il testo.</p>
+                <a class="bottone-principale" href="../index.html">Prova il quiz completo</a>
+            </section>
+        </main>
+    </div>
+
+    <script src="../illustrazioni.js?v=8"></script>
+    <script src="../libro.js?v=8"></script>
+</body>
+</html>

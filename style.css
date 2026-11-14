@@ -1,0 +1,813 @@
+/* ==========================================================
+   SEBUGI BOOKS — stile
+   Sala da concerto: inchiostro scuro, avorio, oro antico
+   ========================================================== */
+
+:root {
+    --bg: #f5eddc;
+    --bg-alt: #efe4cc;
+    --surface: #fbf6ea;
+    --surface-2: #f3e9d2;
+    --line: rgba(90, 68, 34, 0.16);
+    --line-strong: rgba(31, 74, 58, 0.45);
+
+    --text: #1a140b;
+    --text-soft: #433725;
+    --text-faint: #5f5139;
+
+    /* accento: verde bosco (i nomi "gold" restano per compatibilità) */
+    --gold: #1f4a3a;
+    --gold-light: #2b5e49;
+    --gold-deep: #163829;
+    --sepia: #a67c3d;
+    --on-accent: #f7f0e0;
+
+    --ok: #3f7d5a;
+    --warn: #b9832f;
+    --bad: #b5524a;
+    --neutral: #7b7f8c;
+
+    --font-display: 'Cormorant Garamond', Georgia, 'Times New Roman', serif;
+    --font-ui: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+
+    --radius: 14px;
+    --radius-lg: 22px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    -webkit-text-size-adjust: 100%;
+}
+
+body {
+    font-family: var(--font-ui);
+    font-size: 16px;
+    line-height: 1.5;
+    color: var(--text);
+    min-height: 100vh;
+    min-height: 100dvh;
+    background:
+        radial-gradient(900px 500px at 50% -8%, rgba(166, 124, 61, 0.14), transparent 70%),
+        var(--bg);
+    background-attachment: fixed;
+    -webkit-font-smoothing: antialiased;
+    padding-bottom: env(safe-area-inset-bottom);
+}
+
+button,
+select {
+    font-family: var(--font-ui);
+    -webkit-tap-highlight-color: transparent;
+}
+
+:focus-visible {
+    outline: 2px solid var(--gold-light);
+    outline-offset: 3px;
+}
+
+/* ---------- HEADER HOME ---------- */
+
+#schermata-home header {
+    text-align: center;
+    padding: calc(48px + env(safe-area-inset-top)) 24px 34px;
+}
+
+#schermata-home header h1 {
+    font-family: var(--font-display);
+    font-weight: 600;
+    font-size: 2.9rem;
+    line-height: 1.05;
+    letter-spacing: 0.04em;
+    color: var(--gold-light);
+    margin-bottom: 10px;
+}
+
+#schermata-home header p {
+    font-family: var(--font-display);
+    font-style: italic;
+    font-size: 1.2rem;
+    color: var(--text-soft);
+}
+
+/* ---------- HEADER GIOCO ---------- */
+
+#schermata-gioco header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    position: relative;
+    padding: calc(16px + env(safe-area-inset-top)) 20px 16px;
+    border-bottom: 1px solid var(--line);
+}
+
+#schermata-gioco header h1 {
+    font-family: var(--font-display);
+    font-weight: 600;
+    font-size: 1.5rem;
+    letter-spacing: 0.04em;
+    color: var(--gold-light);
+}
+
+#btn-home {
+    position: absolute;
+    left: 16px;
+    top: 50%;
+    margin-top: calc(env(safe-area-inset-top) / 2);
+    transform: translateY(-50%);
+    background: transparent;
+    border: 1px solid var(--line-strong);
+    color: var(--gold-light);
+    padding: 8px 14px;
+    border-radius: 999px;
+    cursor: pointer;
+    font-size: 0.82rem;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+    transition: background 0.2s ease, border-color 0.2s ease;
+}
+
+#btn-home:hover {
+    background: rgba(31, 74, 58, 0.08);
+    border-color: var(--gold);
+}
+
+/* ---------- MAIN ---------- */
+
+main {
+    max-width: 560px;
+    margin: 0 auto;
+    padding: 8px 20px 48px;
+}
+
+#schermata-gioco main {
+    padding-top: 28px;
+}
+
+h2 {
+    font-family: var(--font-display);
+    font-weight: 600;
+    text-align: center;
+    color: var(--text);
+    font-size: 1.6rem;
+    letter-spacing: 0.02em;
+    margin-bottom: 26px;
+}
+
+/* ---------- FILTRI ---------- */
+
+#filtri {
+    background: linear-gradient(180deg, var(--surface), var(--bg-alt));
+    border: 1px solid var(--line);
+    border-radius: var(--radius-lg);
+    padding: 32px 26px 28px;
+    box-shadow: 0 24px 60px rgba(70, 50, 20, 0.14);
+}
+
+.filtro-gruppo {
+    margin-bottom: 18px;
+}
+
+.filtro-gruppo label {
+    display: block;
+    margin-bottom: 7px;
+    color: var(--gold);
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+}
+
+.filtro-gruppo select {
+    width: 100%;
+    padding: 14px 44px 14px 16px;
+    border-radius: var(--radius);
+    border: 1px solid var(--line);
+    background-color: var(--surface-2);
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='%231f4a3a' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 16px center;
+    color: var(--text);
+    font-size: 1rem;
+    cursor: pointer;
+    -webkit-appearance: none;
+    appearance: none;
+    transition: border-color 0.2s ease, background-color 0.2s ease;
+}
+
+.filtro-gruppo select:hover {
+    border-color: var(--line-strong);
+}
+
+.filtro-gruppo select:focus {
+    border-color: var(--gold);
+}
+
+.filtro-gruppo select option {
+    background: var(--surface-2);
+    color: var(--text);
+}
+
+/* ---------- BOTTONE GIOCA ---------- */
+
+#btn-gioca {
+    border: 1px solid var(--sepia) !important;
+    display: block;
+    width: 100%;
+    margin-top: 30px;
+    padding: 18px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    border: none;
+    border-radius: var(--radius);
+    cursor: pointer;
+    color: var(--on-accent);
+    background: linear-gradient(180deg, var(--gold-light), var(--gold));
+    box-shadow:
+        0 1px 0 rgba(255, 255, 255, 0.18) inset,
+        0 10px 28px rgba(31, 74, 58, 0.22);
+    transition: transform 0.15s ease, box-shadow 0.2s ease, filter 0.2s ease;
+}
+
+#btn-gioca:hover {
+    filter: brightness(1.06);
+    box-shadow:
+        0 1px 0 rgba(255, 255, 255, 0.18) inset,
+        0 14px 34px rgba(31, 74, 58, 0.30);
+}
+
+#btn-gioca:active {
+    transform: translateY(1px) scale(0.995);
+}
+
+/* ---------- CARD BRANO ---------- */
+
+#card-frase {
+    background: linear-gradient(180deg, var(--surface), var(--bg-alt));
+    border: 1px solid var(--line);
+    border-radius: var(--radius-lg);
+    padding: 44px 24px 36px;
+    text-align: center;
+    margin-bottom: 20px;
+    box-shadow: 0 24px 60px rgba(70, 50, 20, 0.14);
+}
+
+#info-frase {
+    font-family: var(--font-display);
+    font-style: italic;
+    font-size: 1.4rem;
+    color: var(--text-soft);
+    min-height: 2em;
+    margin-bottom: 30px;
+}
+
+/* ---------- BOTTONE MOSTRA RISPOSTA ---------- */
+
+#btn-mostra-risposta {
+    display: block;
+    width: 100%;
+    padding: 17px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    cursor: pointer;
+    border-radius: var(--radius);
+    color: var(--gold-light);
+    background: transparent;
+    border: 1px solid var(--line-strong);
+    transition: background 0.2s ease, border-color 0.2s ease, transform 0.15s ease;
+}
+
+#btn-mostra-risposta:hover {
+    background: rgba(31, 74, 58, 0.07);
+    border-color: var(--gold);
+}
+
+#btn-mostra-risposta:active {
+    transform: translateY(1px);
+}
+
+/* ---------- RISPOSTA ---------- */
+
+#risposta {
+    background: linear-gradient(180deg, var(--surface), var(--bg-alt));
+    border: 1px solid var(--line-strong);
+    border-radius: var(--radius-lg);
+    padding: 34px 22px 24px;
+    text-align: center;
+    animation: entra 0.35s ease both;
+    box-shadow: 0 24px 60px rgba(70, 50, 20, 0.14);
+}
+
+@keyframes entra {
+    from { opacity: 0; transform: translateY(8px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+#titolo-risposta {
+    color: var(--gold-light);
+    font-size: 1.9rem;
+    line-height: 1.15;
+    margin-bottom: 10px;
+}
+
+#autore-risposta {
+    font-family: var(--font-display);
+    font-style: italic;
+    font-size: 1.3rem;
+    color: var(--text-soft);
+    margin-bottom: 14px;
+}
+
+/* ---------- BOTTONI VALUTAZIONE ---------- */
+
+#bottoni-anki {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin-bottom: 18px;
+}
+
+.anki-btn {
+    --c: var(--neutral);
+    padding: 15px 10px;
+    border-radius: var(--radius);
+    border: 1px solid color-mix(in srgb, var(--c) 45%, transparent);
+    background: color-mix(in srgb, var(--c) 12%, transparent);
+    color: var(--text);
+    font-size: 0.92rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.2s ease, border-color 0.2s ease, transform 0.15s ease;
+}
+
+.anki-btn:hover {
+    background: color-mix(in srgb, var(--c) 22%, transparent);
+    border-color: var(--c);
+}
+
+.anki-btn:active {
+    transform: scale(0.97);
+}
+
+#btn-corretto  { --c: var(--ok); }
+#btn-insicuro  { --c: var(--warn); }
+#btn-sbagliato { --c: var(--bad); }
+#btn-nonricordo { --c: var(--neutral); }
+
+#btn-segnala {
+    background: transparent;
+    border: none;
+    color: var(--text-faint);
+    font-size: 0.78rem;
+    cursor: pointer;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    padding: 6px 10px;
+    transition: color 0.2s ease;
+}
+
+#btn-segnala:hover {
+    color: var(--text-soft);
+}
+
+/* ---------- MOBILE ---------- */
+
+@media (max-width: 480px) {
+    #schermata-home header {
+        padding-top: calc(36px + env(safe-area-inset-top));
+        padding-bottom: 26px;
+    }
+    #schermata-home header h1 { font-size: 2.3rem; }
+    #schermata-home header p { font-size: 1.08rem; }
+
+    #filtri { padding: 26px 18px 22px; }
+    #card-frase { padding: 36px 18px 30px; }
+
+    #titolo-risposta { font-size: 1.6rem; }
+
+    #schermata-gioco header h1 { font-size: 1.25rem; }
+}
+
+/* ---------- ACCESSIBILITÀ ---------- */
+
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+        animation: none !important;
+        transition: none !important;
+    }
+}
+
+/* ---------- FRASE ---------- */
+
+#testo-frase {
+    font-family: var(--font-display);
+    font-weight: 500;
+    font-size: 1.75rem;
+    line-height: 1.35;
+    color: var(--text);
+    margin: 4px 0 6px;
+}
+
+#testo-frase::before { content: "\201C"; color: var(--gold); }
+#testo-frase::after  { content: "\201D"; color: var(--gold); }
+
+#genere-risposta {
+    display: inline-block;
+    margin-bottom: 26px;
+    padding: 4px 14px;
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    color: var(--text-soft);
+    font-size: 0.74rem;
+    font-weight: 500;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+
+@media (max-width: 480px) {
+    #testo-frase { font-size: 1.45rem; }
+}
+
+#traduzione-risposta {
+    font-family: var(--font-display);
+    font-style: italic;
+    font-size: 1.1rem;
+    line-height: 1.4;
+    color: var(--text-soft);
+    margin: -6px 0 24px;
+}
+
+#traduzione-risposta:empty {
+    display: none;
+}
+
+/* ---------- PAGINA DI UN LIBRO ---------- */
+
+#link-home {
+    position: absolute;
+    left: 16px;
+    top: 50%;
+    margin-top: calc(env(safe-area-inset-top) / 2);
+    transform: translateY(-50%);
+    border: 1px solid var(--line-strong);
+    color: var(--gold-light);
+    padding: 8px 14px;
+    border-radius: 999px;
+    font-size: 0.82rem;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+    text-decoration: none;
+    transition: background 0.2s ease, border-color 0.2s ease;
+}
+
+#link-home:hover {
+    background: rgba(31, 74, 58, 0.08);
+    border-color: var(--gold);
+}
+
+.presentazione {
+    text-align: center;
+    margin-bottom: 28px;
+}
+
+.presentazione h2 {
+    font-size: 2.2rem;
+    line-height: 1.1;
+    color: var(--gold-light);
+    margin-bottom: 6px;
+}
+
+.sotto {
+    font-family: var(--font-display);
+    font-style: italic;
+    font-size: 1.1rem;
+    color: var(--text-soft);
+    margin-bottom: 14px;
+}
+
+.presentazione p:last-child {
+    color: var(--text-soft);
+}
+
+#scelte {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin-bottom: 28px;
+}
+
+#scelte .anki-btn {
+    --c: var(--gold);
+    padding: 16px 10px;
+}
+
+#btn-avanti,
+#btn-ricomincia {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    margin-top: 18px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    cursor: pointer;
+    border-radius: var(--radius);
+    color: var(--gold-light);
+    background: transparent;
+    border: 1px solid var(--line-strong);
+    transition: background 0.2s ease, border-color 0.2s ease;
+}
+
+#btn-avanti:hover,
+#btn-ricomincia:hover {
+    background: rgba(31, 74, 58, 0.07);
+    border-color: var(--gold);
+}
+
+#risposta #traduzione-risposta {
+    margin: 4px 0 20px;
+}
+
+#fine {
+    background: linear-gradient(180deg, var(--surface), var(--bg-alt));
+    border: 1px solid var(--line-strong);
+    border-radius: var(--radius-lg);
+    padding: 34px 22px 26px;
+    text-align: center;
+    box-shadow: 0 24px 60px rgba(70, 50, 20, 0.14);
+    animation: entra 0.35s ease both;
+}
+
+#punteggio {
+    color: var(--gold-light);
+    margin-bottom: 10px;
+}
+
+#commento-fine {
+    color: var(--text-soft);
+    margin-bottom: 24px;
+}
+
+.bottone-principale {
+    display: block;
+    padding: 18px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    text-align: center;
+    text-decoration: none;
+    border-radius: var(--radius);
+    color: var(--on-accent);
+    background: linear-gradient(180deg, var(--gold-light), var(--gold));
+    box-shadow:
+        0 1px 0 rgba(255, 255, 255, 0.18) inset,
+        0 10px 28px rgba(31, 74, 58, 0.22);
+    transition: filter 0.2s ease;
+}
+
+.bottone-principale:hover {
+    filter: brightness(1.06);
+}
+
+.citazioni {
+    margin-top: 44px;
+}
+
+.citazioni h2 {
+    margin-bottom: 6px;
+}
+
+.citazioni .sotto {
+    text-align: center;
+    margin-bottom: 22px;
+}
+
+.citazioni blockquote {
+    padding: 18px 20px;
+    margin-bottom: 12px;
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-left: 2px solid var(--gold);
+    border-radius: var(--radius);
+}
+
+.citazioni blockquote .en {
+    font-family: var(--font-display);
+    font-size: 1.25rem;
+    line-height: 1.35;
+    color: var(--text);
+    margin-bottom: 6px;
+}
+
+.citazioni blockquote .it {
+    font-size: 0.92rem;
+    color: var(--text-soft);
+}
+
+.invito {
+    margin-top: 40px;
+    text-align: center;
+}
+
+.invito p {
+    color: var(--text-soft);
+    margin-bottom: 18px;
+}
+
+@media (max-width: 480px) {
+    .presentazione h2 { font-size: 1.8rem; }
+    #schermata-gioco header {
+        justify-content: flex-start;
+        padding-left: 112px;
+        padding-right: 12px;
+    }
+    #schermata-gioco header h1 { font-size: 1.1rem; }
+}
+
+/* ---------- ILLUSTRAZIONE ALLA RIVELAZIONE ---------- */
+
+#illustrazione {
+    margin: -6px 0 16px;
+}
+
+#illustrazione:empty {
+    display: none;
+}
+
+#illustrazione svg {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-height: 190px;
+    animation: entra 0.5s ease both;
+}
+
+/* Quinto bottone: occupa tutta la riga */
+#btn-nonsapevo { --c: var(--sepia); grid-column: 1 / -1; }
+
+/* Bandierine 3D per la lingua dell'interfaccia */
+#sel-interfaccia { position: absolute; top: 12px; right: 12px; display: flex; gap: 8px; z-index: 5; }
+#sel-interfaccia button {
+    width: 42px; height: 42px; padding: 0; border-radius: 50%; cursor: pointer; position: relative;
+    border: 3px solid #fff; overflow: hidden;
+    box-shadow: 0 5px 0 rgba(0,0,0,.35), 0 8px 12px rgba(0,0,0,.25), inset 0 -4px 6px rgba(0,0,0,.25);
+    transition: transform .08s, box-shadow .08s;
+    opacity: .75;
+}
+#sel-interfaccia button svg { width: 100%; height: 100%; display: block; }
+#sel-interfaccia button::after {
+    content: ''; position: absolute; inset: 0; border-radius: 50%; pointer-events: none;
+    background: radial-gradient(circle at 32% 22%, rgba(255,255,255,.65), rgba(255,255,255,0) 55%);
+}
+#sel-interfaccia button.attivo { opacity: 1; outline: 3px solid var(--gold); outline-offset: 2px; }
+#sel-interfaccia button:active { transform: translateY(4px); box-shadow: 0 1px 0 rgba(0,0,0,.35), 0 2px 4px rgba(0,0,0,.25), inset 0 -4px 6px rgba(0,0,0,.25); }
+#schermata-home header { position: relative; padding-top: 64px; }
+.filtro-gruppo.nascosto { display: none; }
+
+/* ---------- Scelte a bottoni ---------- */
+.suggerimento { color: var(--text-soft); font-size: .88rem; line-height: 1.4; margin: 0 0 16px; text-align: center; }
+.chips .suggerimento { text-align: left; margin: 2px 0 0; font-style: italic; }
+.chips { display: flex; flex-wrap: wrap; gap: 8px; }
+.chip {
+    padding: 9px 14px; border-radius: 999px; cursor: pointer;
+    border: 1px solid var(--line-strong); background: var(--surface-2); color: var(--text);
+    font: 500 .92rem 'Inter', sans-serif; line-height: 1.2;
+    transition: background .15s, color .15s, transform .08s;
+}
+.chip:hover { background: var(--bg-alt); }
+.chip:active { transform: scale(.97); }
+.chip.on { background: var(--gold); color: var(--on-accent); border-color: var(--gold); }
+
+/* ---------- Grafico delle risposte ---------- */
+#statistiche {
+    max-width: 560px; margin: 0 auto; padding: 0 20px 48px;
+}
+#statistiche h3 {
+    font-family: var(--font-display); font-weight: 600; font-size: 1.15rem; color: var(--text);
+    text-align: center; margin-bottom: 12px;
+}
+#stat-grafico {
+    display: flex; gap: 8px; align-items: flex-end; justify-content: space-between;
+    padding: 16px 12px 12px; border-radius: var(--radius-lg);
+    background: linear-gradient(180deg, var(--surface), var(--bg-alt)); border: 1px solid var(--line);
+}
+.stat-col { flex: 1; display: flex; flex-direction: column; align-items: center; gap: 4px; min-width: 0; }
+.stat-pct { font: 700 .85rem 'Inter', sans-serif; color: var(--text); }
+.stat-asta { width: 100%; max-width: 44px; height: 110px; display: flex; align-items: flex-end;
+    background: rgba(90,68,34,.08); border-radius: 8px 8px 4px 4px; overflow: hidden; }
+.stat-riempi { width: 100%; border-radius: 8px 8px 0 0; background: var(--c); transition: height .5s ease; min-height: 2px; }
+.stat-nome { font: 600 .66rem 'Inter', sans-serif; color: var(--text-soft); text-align: center; line-height: 1.15; min-height: 2.3em; }
+.stat-n { font: 500 .72rem 'Inter', sans-serif; color: var(--text-faint); }
+.stat-corretto { --c: var(--ok); }
+.stat-insicuro { --c: var(--warn); }
+.stat-sbagliato { --c: var(--bad); }
+.stat-nonricordavo { --c: var(--neutral); }
+.stat-nonsapevo { --c: var(--sepia); }
+
+/* Su schermi larghi il grafico sta a sinistra */
+@media (min-width: 1000px) {
+    #statistiche { position: fixed; left: 28px; top: 120px; width: 300px; padding: 0; margin: 0; }
+}
+
+/* Collegamento IT/EN nelle pagine dei libri */
+.lang-riga { text-align: right; margin: 0 0 8px; }
+.lang-link {
+    display: inline-block; color: var(--gold-light); font-size: .85rem; font-weight: 600; text-decoration: none;
+    border: 1px solid var(--line-strong); padding: 6px 12px; border-radius: 999px;
+}
+.indice-libri { list-style: none; padding: 0; margin: 0; }
+.indice-libri li { margin: 0; border-bottom: 1px solid var(--line); }
+.indice-libri a { display: flex; justify-content: space-between; gap: 12px; padding: 12px 4px; color: var(--text); text-decoration: none; }
+.indice-libri a:hover { color: var(--gold); }
+.indice-libri small { color: var(--text-soft); text-align: right; }
+
+.nota-libro { color: var(--gold); font-weight: 600; font-size: .9rem; text-align: center; margin: 4px 0 8px; }
+.nota-libro:empty { display: none; }
+#quiz #btn-mostra-risposta { margin-top: 16px; }
+
+
+/* Pie di pagina con i collegamenti legali */
+#pie-pagina {
+    max-width: 640px;
+    margin: 2.5rem auto 2rem;
+    padding: 0 1rem;
+    text-align: center;
+    font-family: var(--font-ui);
+    font-size: 0.8rem;
+    color: var(--text-faint);
+}
+#pie-pagina a {
+    color: var(--text-soft);
+    text-decoration: underline;
+    margin: 0 0.35rem;
+}
+#pie-pagina a:hover {
+    color: var(--gold);
+}
+
+/* Secondo bottone "inizia a giocare" sotto il livello */
+#btn-gioca-subito {
+    display: block;
+    width: 100%;
+    margin: 14px 0 6px;
+    padding: 14px 16px;
+    font-family: var(--font-ui);
+    font-size: 0.82rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    border: 1px solid var(--sepia);
+    border-radius: var(--radius);
+    cursor: pointer;
+    color: var(--on-accent);
+    background: linear-gradient(180deg, var(--gold-light), var(--gold));
+}
+#btn-gioca-subito:hover { filter: brightness(1.06); }
+
+/* ---------- Compattezza sul telefono: tutto visibile senza scorrere troppo ---------- */
+#info-frase { margin-bottom: 14px; min-height: 1.4em; }
+#risposta { padding: 14px 20px 22px; }
+#genere-risposta { margin-bottom: 14px; }
+#traduzione-risposta { margin: -2px 0 16px; }
+@media (max-width: 480px) {
+    #card-frase { padding: 24px 16px 20px; margin-bottom: 20px; }
+    #risposta { padding: 10px 16px 20px; }
+    #titolo-risposta { margin-bottom: 6px; }
+    #autore-risposta { margin-bottom: 8px; }
+}
+
+/* Voti già dati, sempre visibili sopra la frase */
+#mini-voti { display: flex; gap: 6px; justify-content: center; flex-wrap: wrap; margin: 0 0 12px; }
+.mini-voto { display: inline-flex; align-items: center; gap: 5px; padding: 3px 10px; border-radius: 999px;
+    background: var(--surface-2); border: 1px solid var(--line); font: 600 .78rem 'Inter', sans-serif; color: var(--text); }
+.mini-voto i { width: 9px; height: 9px; border-radius: 50%; background: var(--c); display: inline-block; }
+
+/* Ripasso nella home */
+#ripasso { max-width: 560px; margin: 8px auto 0; padding: 0 20px 8px; text-align: center; }
+#ripasso h2 { font-family: var(--font-display); font-size: 1.3rem; margin-bottom: 4px; }
+#ripasso .chips { justify-content: center; }
+.ripasso-btn[disabled] { opacity: .4; cursor: default; }
+.ripasso-btn { border-left: 6px solid var(--c); }
+#btn-cancella-voti { margin-top: 14px; background: none; border: 0; color: var(--text-soft); text-decoration: underline; font: 500 .85rem 'Inter', sans-serif; cursor: pointer; }
+
+/* Illustrazione come sfondo della frase: non occupa spazio */
+#card-frase { position: relative; overflow: hidden; }
+#card-frase > *:not(#illustrazione) { position: relative; z-index: 1; }
+#card-frase #illustrazione {
+    position: absolute; inset: 0; z-index: 0; margin: 0; pointer-events: none;
+    display: flex; align-items: center; justify-content: center; opacity: .2;
+}
+#card-frase #illustrazione svg { width: 100%; height: 100%; max-height: none; animation: entra 0.5s ease both; }
+
+.logo-home { display: block; width: 220px; max-width: 70%; height: auto; margin: 0 auto 6px; }

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="theme-color" content="#f5eddc">
+    <title>Uncle Silas: famous quotes and quiz | Sebugi Books</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="../../favicon-32.png">
+    <link rel="apple-touch-icon" href="../../favicon-192.png">
+    <meta name="description" content="The most famous lines of Uncle Silas by J. Sheridan Le Fanu. Test how well you know the book with a 10-phrase quiz.">
+    <link rel="canonical" href="https://books.sebugi.com/libri/en/uncle-silas.html">
+    <link rel="alternate" hreflang="it" href="https://books.sebugi.com/libri/uncle-silas.html">
+    <link rel="alternate" hreflang="en" href="https://books.sebugi.com/libri/en/uncle-silas.html">
+    <meta property="og:title" content="Uncle Silas: famous quotes and quiz">
+    <meta property="og:description" content="How well do you know Uncle Silas? Recognise its lines among those of other great novels.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://books.sebugi.com/libri/en/uncle-silas.html">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../style.css?v=8">
+</head>
+<body data-libro="Uncle Silas" data-titolo="Uncle Silas" data-dati="../../data/frasi.json">
+
+    <div id="schermata-gioco">
+        <header>
+            <a id="link-home" href="index.html">&larr; Books</a>
+            <h1>Sebugi Books</h1>
+        </header>
+
+        <main>
+            <p class="lang-riga"><a class="lang-link" href="../uncle-silas.html" hreflang="it">Italiano</a></p>
+            <section class="presentazione">
+                <h2>Uncle Silas</h2>
+                <p class="sotto">J. Sheridan Le Fanu, 1864 · Gothic</p>
+                <p>A young heiress placed in the care of a suspect uncle in a large, isolated house: a psychological Gothic. How many do you recognise? Ten phrases: some are from this book, others from other great books. Try to guess the book for each one, then reveal the answer and rate yourself honestly.</p>
+            </section>
+
+            <div id="quiz">
+                <div id="card-frase">
+                    <p id="info-frase">Phrase <span id="numero">1</span> of <span id="totale">10</span></p>
+                    <p id="testo-frase"></p>
+                </div>
+
+                <button id="btn-mostra-risposta" style="display:none;">Show answer</button>
+
+                <div id="risposta" style="display:none;">
+                    <div id="illustrazione"></div>
+                    <h2 id="titolo-risposta"></h2>
+                    <p id="autore-risposta"></p>
+                    <span id="genere-risposta"></span>
+                    <p id="nota-libro" class="nota-libro"></p>
+                    <p id="traduzione-risposta"></p>
+
+                    <div id="bottoni-anki">
+                        <button class="anki-btn" id="btn-corretto">Correct</button>
+                        <button class="anki-btn" id="btn-insicuro">Unsure</button>
+                        <button class="anki-btn" id="btn-sbagliato">Wrong</button>
+                        <button class="anki-btn" id="btn-nonricordo">I forgot it</button>
+                        <button class="anki-btn" id="btn-nonsapevo">I didn't know</button>
+                    </div>
+                </div>
+
+                <div id="fine" style="display:none;">
+                    <h2 id="punteggio"></h2>
+                    <p id="commento-fine"></p>
+                    <a class="bottone-principale" href="../../index.html?lang=en">Play with all 138 books</a>
+                    <button id="btn-ricomincia">Try again</button>
+                </div>
+
+                <aside id="statistiche" style="display:none;" aria-live="polite">
+                    <h3 id="stat-titolo"></h3>
+                    <div id="stat-grafico"></div>
+                </aside>
+            </div>
+
+            <section class="citazioni">
+                <h2>Lines from Uncle Silas</h2>
+                <p class="sotto">A few lines from the original text.</p>
+                <blockquote>
+                    <p class="en">A great grass-grown park-wall, overtopped with mighty trees; but still on and on we came at a canter that seemed almost a gallop.</p>
+                </blockquote>
+                <blockquote>
+                    <p class="en">Madame revisited her apartment, and returned, not, I think, improved in temper.</p>
+                </blockquote>
+                <blockquote>
+                    <p class="en">The actual decay of the house had been prevented by my dear father; and the roof, windows, masonry, and carpentry had all been kept in repair.</p>
+                </blockquote>
+            </section>
+
+            <section class="invito">
+                <p>The full quiz has 138 novels, Gothic books, poems and essays in the original language, with famous quotes and many more phrases taken from the whole text.</p>
+                <a class="bottone-principale" href="../../index.html?lang=en">Try the full quiz</a>
+            </section>
+        </main>
+    </div>
+
+    <script src="../../illustrazioni.js?v=8"></script>
+    <script src="../../libro.js?v=8"></script>
+</body>
+</html>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="theme-color" content="#f5eddc">
+    <title>Racconto di due città: frasi celebri e quiz | Sebugi Books</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32.png">
+    <link rel="apple-touch-icon" href="../favicon-192.png">
+    <meta name="description" content="Le frasi più celebri di Racconto di due città (A Tale of Two Cities) di Charles Dickens, in inglese con traduzione italiana. Metti alla prova quanto conosci il libro con un quiz di 10 frasi.">
+    <link rel="canonical" href="https://books.sebugi.com/libri/racconto-di-due-citta.html">
+    <link rel="alternate" hreflang="it" href="https://books.sebugi.com/libri/racconto-di-due-citta.html">
+    <link rel="alternate" hreflang="en" href="https://books.sebugi.com/libri/en/a-tale-of-two-cities.html">
+    <meta property="og:title" content="Racconto di due città: frasi celebri e quiz">
+    <meta property="og:description" content="Quanto conosci Racconto di due città? Riconosci le sue frasi tra quelle di altri grandi romanzi.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://books.sebugi.com/libri/racconto-di-due-citta.html">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css?v=8">
+</head>
+<body data-libro="A Tale of Two Cities" data-titolo="Racconto di due città" data-dati="../data/frasi.json">
+
+    <div id="schermata-gioco">
+        <header>
+            <a id="link-home" href="index.html">&larr; Libri</a>
+            <h1>Sebugi Books</h1>
+        </header>
+
+        <main>
+            <p class="lang-riga"><a class="lang-link" href="../en/a-tale-of-two-cities.html" hreflang="en">English</a></p>
+            <section class="presentazione">
+                <h2>Racconto di due città</h2>
+                <p class="sotto">A Tale of Two Cities, Charles Dickens, 1859 · Romanzo</p>
+                <p>Londra e Parigi negli anni della Rivoluzione francese: amore, sacrificio e una delle aperture più famose della letteratura. Quante riconosci? Dieci frasi: alcune sono di questo libro, altre di altri grandi libri. Per ognuna prova a indovinare il libro, poi gira la carta e dì onestamente come è andata.</p>
+            </section>
+
+            <div id="quiz">
+                <div id="card-frase">
+                    <p id="info-frase">Frase <span id="numero">1</span> di <span id="totale">10</span></p>
+                    <p id="testo-frase"></p>
+                </div>
+
+                <button id="btn-mostra-risposta" style="display:none;">Mostra risposta</button>
+
+                <div id="risposta" style="display:none;">
+                    <div id="illustrazione"></div>
+                    <h2 id="titolo-risposta"></h2>
+                    <p id="autore-risposta"></p>
+                    <span id="genere-risposta"></span>
+                    <p id="nota-libro" class="nota-libro"></p>
+                    <p id="traduzione-risposta"></p>
+
+                    <div id="bottoni-anki">
+                        <button class="anki-btn" id="btn-corretto">Corretto</button>
+                        <button class="anki-btn" id="btn-insicuro">Insicuro</button>
+                        <button class="anki-btn" id="btn-sbagliato">Sbagliato</button>
+                        <button class="anki-btn" id="btn-nonricordo">Non ricordavo</button>
+                        <button class="anki-btn" id="btn-nonsapevo">Non lo sapevo</button>
+                    </div>
+                </div>
+
+                <div id="fine" style="display:none;">
+                    <h2 id="punteggio"></h2>
+                    <p id="commento-fine"></p>
+                    <a class="bottone-principale" href="../index.html">Gioca con tutti i 138 libri</a>
+                    <button id="btn-ricomincia">Rifai il quiz</button>
+                </div>
+
+                <aside id="statistiche" style="display:none;" aria-live="polite">
+                    <h3 id="stat-titolo"></h3>
+                    <div id="stat-grafico"></div>
+                </aside>
+            </div>
+
+            <section class="citazioni">
+                <h2>Le frasi celebri di Racconto di due città</h2>
+                <p class="sotto">In inglese, con traduzione italiana.</p>
+                <blockquote>
+                    <p class="en">It is a far, far better thing that I do, than I have ever done; it is a far, far better rest that I go to than I have ever known.</p>
+                    <p class="it">È un atto di gran lunga migliore di tutti quelli che ho compiuto finora; è un riposo di gran lunga migliore di tutti quelli che ho conosciuto.</p>
+                </blockquote>
+                <blockquote>
+                    <p class="en">It was the best of times, it was the worst of times</p>
+                    <p class="it">Era il migliore dei tempi, era il peggiore dei tempi</p>
+                </blockquote>
+                <blockquote>
+                    <p class="en">A wonderful fact to reflect upon, that every human creature is constituted to be that profound secret and mystery to every other.</p>
+                    <p class="it">Fatto meraviglioso a cui pensare: ogni creatura umana è costituita in modo da essere un profondo segreto e mistero per ogni altra.</p>
+                </blockquote>
+            </section>
+
+            <section class="invito">
+                <p>Il quiz completo ha 138 romanzi, libri gotici, poesie e saggi in lingua originale, con le frasi celebri e tante altre prese da tutto il testo.</p>
+                <a class="bottone-principale" href="../index.html">Prova il quiz completo</a>
+            </section>
+        </main>
+    </div>
+
+    <script src="../illustrazioni.js?v=8"></script>
+    <script src="../libro.js?v=8"></script>
+</body>
+</html>

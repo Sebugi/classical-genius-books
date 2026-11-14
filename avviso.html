@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Non affiliazione e fonti / Non-affiliation and sources - Sebugi</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+    <link rel="apple-touch-icon" href="favicon-192.png">
+<style>
+body{font-family:Georgia,serif;background:#f5eddc;color:#2b1d0e;max-width:720px;margin:0 auto;padding:24px 18px 60px;line-height:1.6}
+h1{font-size:1.6em;border-bottom:1px solid #b89b6a;padding-bottom:8px}
+h2{font-size:1.15em;margin-top:1.6em}
+hr{border:0;border-top:1px solid #b89b6a;margin:2.5em 0}
+a{color:#1f4a3a}
+small{color:#5a4630}
+</style>
+</head>
+<body>
+<p><a href="./">&larr; Home</a></p>
+<div id="blocco-it">
+<h1>Non affiliazione e fonti</h1>
+<p><small>Ultimo aggiornamento: 13 novembre 2026</small></p>
+
+<p>Sebugi non è affiliata, sponsorizzata o approvata da alcun editore, erede di autori o titolare di marchi citati nelle sue app.</p>
+<p>Nomi di autori e titoli di opere sono usati solo per identificare i libri. Tutti i marchi e i nomi appartengono ai rispettivi proprietari.</p>
+<p>Questa app usa solo testi di opere il cui diritto d'autore è scaduto e illustrazioni originali. Non contiene loghi, fotografie, video o altro materiale ufficiale di terzi.</p>
+<p>Segnalazioni o richieste: <a href="mailto:sebugi.app@gmail.com">sebugi.app@gmail.com</a>.</p>
+
+</div>
+<hr id="separatore">
+<div id="blocco-en">
+<h1>Non-affiliation and sources</h1>
+<p><small>Last updated: 13 November 2026</small></p>
+
+<p>Sebugi is not affiliated with, sponsored by or endorsed by any publisher, author's estate or owner of any trademark mentioned in its apps.</p>
+<p>Names of authors and titles of works are used only to identify the books. All trademarks and names belong to their respective owners.</p>
+<p>This app uses only texts of works whose copyright has expired, and original illustrations. It contains no logos, photographs, videos or other official third party material.</p>
+<p>Reports or requests: <a href="mailto:sebugi.app@gmail.com">sebugi.app@gmail.com</a>.</p>
+
+</div>
+<script>
+(function () {
+    var lang = 'it';
+    try { lang = localStorage.getItem('cgb-ui') || 'it'; } catch (e) {}
+    try { var l = new URLSearchParams(location.search).get('lang'); if (l) lang = l; } catch (e) {}
+    if (lang !== 'it') {
+        var it = document.getElementById('blocco-it');
+        var sep = document.getElementById('separatore');
+        if (it) it.style.display = 'none';
+        if (sep) sep.style.display = 'none';
+        document.documentElement.lang = 'en';
+    }
+})();
+</script>
+</body>
+</html>

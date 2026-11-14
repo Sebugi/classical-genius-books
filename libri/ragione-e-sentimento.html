@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="theme-color" content="#f5eddc">
+    <title>Ragione e sentimento: frasi celebri e quiz | Sebugi Books</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32.png">
+    <link rel="apple-touch-icon" href="../favicon-192.png">
+    <meta name="description" content="Le frasi più celebri di Ragione e sentimento (Sense and Sensibility) di Jane Austen, in inglese con traduzione italiana. Metti alla prova quanto conosci il libro con un quiz di 10 frasi.">
+    <link rel="canonical" href="https://books.sebugi.com/libri/ragione-e-sentimento.html">
+    <link rel="alternate" hreflang="it" href="https://books.sebugi.com/libri/ragione-e-sentimento.html">
+    <link rel="alternate" hreflang="en" href="https://books.sebugi.com/libri/en/sense-and-sensibility.html">
+    <meta property="og:title" content="Ragione e sentimento: frasi celebri e quiz">
+    <meta property="og:description" content="Quanto conosci Ragione e sentimento? Riconosci le sue frasi tra quelle di altri grandi romanzi.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://books.sebugi.com/libri/ragione-e-sentimento.html">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css?v=8">
+</head>
+<body data-libro="Sense and Sensibility" data-titolo="Ragione e sentimento" data-dati="../data/frasi.json">
+
+    <div id="schermata-gioco">
+        <header>
+            <a id="link-home" href="index.html">&larr; Libri</a>
+            <h1>Sebugi Books</h1>
+        </header>
+
+        <main>
+            <p class="lang-riga"><a class="lang-link" href="../en/sense-and-sensibility.html" hreflang="en">English</a></p>
+            <section class="presentazione">
+                <h2>Ragione e sentimento</h2>
+                <p class="sotto">Sense and Sensibility, Jane Austen, 1811 · Romanzo</p>
+                <p>Le sorelle Elinor e Marianne Dashwood affrontano amore e difficoltà economiche con due temperamenti opposti: la ragione e il sentimento. Quante riconosci? Dieci frasi: alcune sono di questo libro, altre di altri grandi libri. Per ognuna prova a indovinare il libro, poi gira la carta e dì onestamente come è andata.</p>
+            </section>
+
+            <div id="quiz">
+                <div id="card-frase">
+                    <p id="info-frase">Frase <span id="numero">1</span> di <span id="totale">10</span></p>
+                    <p id="testo-frase"></p>
+                </div>
+
+                <button id="btn-mostra-risposta" style="display:none;">Mostra risposta</button>
+
+                <div id="risposta" style="display:none;">
+                    <div id="illustrazione"></div>
+                    <h2 id="titolo-risposta"></h2>
+                    <p id="autore-risposta"></p>
+                    <span id="genere-risposta"></span>
+                    <p id="nota-libro" class="nota-libro"></p>
+                    <p id="traduzione-risposta"></p>
+
+                    <div id="bottoni-anki">
+                        <button class="anki-btn" id="btn-corretto">Corretto</button>
+                        <button class="anki-btn" id="btn-insicuro">Insicuro</button>
+                        <button class="anki-btn" id="btn-sbagliato">Sbagliato</button>
+                        <button class="anki-btn" id="btn-nonricordo">Non ricordavo</button>
+                        <button class="anki-btn" id="btn-nonsapevo">Non lo sapevo</button>
+                    </div>
+                </div>
+
+                <div id="fine" style="display:none;">
+                    <h2 id="punteggio"></h2>
+                    <p id="commento-fine"></p>
+                    <a class="bottone-principale" href="../index.html">Gioca con tutti i 138 libri</a>
+                    <button id="btn-ricomincia">Rifai il quiz</button>
+                </div>
+
+                <aside id="statistiche" style="display:none;" aria-live="polite">
+                    <h3 id="stat-titolo"></h3>
+                    <div id="stat-grafico"></div>
+                </aside>
+            </div>
+
+            <section class="citazioni">
+                <h2>Le frasi celebri di Ragione e sentimento</h2>
+                <p class="sotto">In inglese, con traduzione italiana.</p>
+                <blockquote>
+                    <p class="en">It is not time or opportunity that is to determine intimacy; it is disposition alone.</p>
+                    <p class="it">Non è il tempo né l&#x27;occasione a determinare l&#x27;intimità: è la disposizione, e soltanto quella.</p>
+                </blockquote>
+                <blockquote>
+                    <p class="en">Know your own happiness.</p>
+                    <p class="it">Conosci la tua felicità.</p>
+                </blockquote>
+                <blockquote>
+                    <p class="en">The more I know of the world, the more am I convinced that I shall never see a man whom I can really love.</p>
+                    <p class="it">Più conosco il mondo, più mi convinco che non vedrò mai un uomo che possa amare davvero.</p>
+                </blockquote>
+                <blockquote>
+                    <p class="en">The family of Dashwood had long been settled in Sussex.</p>
+                    <p class="it">La famiglia Dashwood era da lungo tempo stabilita nel Sussex.</p>
+                </blockquote>
+            </section>
+
+            <section class="invito">
+                <p>Il quiz completo ha 138 romanzi, libri gotici, poesie e saggi in lingua originale, con le frasi celebri e tante altre prese da tutto il testo.</p>
+                <a class="bottone-principale" href="../index.html">Prova il quiz completo</a>
+            </section>
+        </main>
+    </div>
+
+    <script src="../illustrazioni.js?v=8"></script>
+    <script src="../libro.js?v=8"></script>
+</body>
+</html>

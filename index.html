@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="theme-color" content="#f5eddc">
+    <title>Sebugi Books</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+    <link rel="apple-touch-icon" href="favicon-192.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css?v=13">
+</head>
+<body>
+
+    <!-- HOME -->
+    <div id="schermata-home">
+        <header>
+            <div id="sel-interfaccia" role="group" aria-label="Lingua / Language / Sprache">
+                <button type="button" data-ui="it" aria-label="Italiano" title="Italiano"><svg viewBox="0 0 3 2" preserveAspectRatio="xMidYMid slice"><rect width="1" height="2" fill="#009246"/><rect x="1" width="1" height="2" fill="#fff"/><rect x="2" width="1" height="2" fill="#ce2b37"/></svg></button>
+                <button type="button" data-ui="en" aria-label="English" title="English"><svg viewBox="0 0 60 30" preserveAspectRatio="xMidYMid slice"><clipPath id="fs"><path d="M0,0H60V30H0z"/></clipPath><clipPath id="ft"><path d="M30,15H60V30zV30H0zH0V0zV0H30z"/></clipPath><g clip-path="url(#fs)"><path d="M0,0H60V30H0z" fill="#012169"/><path d="M0,0L60,30M60,0L0,30" stroke="#fff" stroke-width="6"/><path d="M0,0L60,30M60,0L0,30" clip-path="url(#ft)" stroke="#c8102e" stroke-width="4"/><path d="M30,0V30M0,15H60" stroke="#fff" stroke-width="10"/><path d="M30,0V30M0,15H60" stroke="#c8102e" stroke-width="6"/></g></svg></button>
+                <button type="button" data-ui="de" aria-label="Deutsch" title="Deutsch"><svg viewBox="0 0 5 3" preserveAspectRatio="xMidYMid slice"><rect width="5" height="1" fill="#000"/><rect y="1" width="5" height="1" fill="#dd0000"/><rect y="2" width="5" height="1" fill="#ffce00"/></svg></button>
+            </div>
+            <img src="logo.png" alt="Sebugi" class="logo-home" width="220">
+            <h1>Sebugi Books</h1>
+            <p data-i18n="sottotitolo">Riconosci il libro dalle sue parole</p>
+        </header>
+
+        <main>
+            <section id="filtri">
+                <h2 data-i18n="scegli">Scegli come vuoi giocare</h2>
+
+                <div class="filtro-gruppo">
+                    <label for="sel-livello" data-i18n="livello">Livello</label>
+                    <select id="sel-livello">
+                        <option value="" data-i18n="tutteFrasi">-- Tutte le frasi --</option>
+                        <option value="1" data-i18n="celebri">Frasi celebri</option>
+                        <option value="2" data-i18n="resto">Resto del libro</option>
+                    </select>
+                </div>
+
+                <button type="button" id="btn-gioca-subito" data-i18n="giocaSubito">Inizia a giocare se non vuoi scegliere niente</button>
+
+                <p class="suggerimento" data-i18n="suggerimento">Tocca per scegliere, anche più di uno. Se non scegli niente, vanno bene tutti.</p>
+
+                <div class="filtro-gruppo">
+                    <label data-i18n="nazione">Nazione</label>
+                    <div class="chips" id="chip-nazione"></div>
+                </div>
+
+                <div class="filtro-gruppo">
+                    <label data-i18n="genere">Genere</label>
+                    <div class="chips" id="chip-genere"></div>
+                </div>
+
+                <div class="filtro-gruppo">
+                    <label data-i18n="autore">Autore</label>
+                    <div class="chips" id="chip-autore"></div>
+                </div>
+
+                <div class="filtro-gruppo" id="gruppo-libro">
+                    <label data-i18n="libro">Libro</label>
+                    <div class="chips" id="chip-libro"></div>
+                </div>
+
+                <div class="filtro-gruppo nascosto">
+                    <label for="sel-lingua">Lingua del testo</label>
+                    <select id="sel-lingua">
+                        <option value="">Tutte</option>
+                    </select>
+                </div>
+
+                <button id="btn-gioca" data-i18n="gioca">Inizia a giocare</button>
+            </section>
+        </main>
+
+        <section id="ripasso" style="display:none;">
+            <h2 data-i18n="ripassa">Ripassa le tue risposte</h2>
+            <p class="suggerimento" data-i18n="ripassaNota">Scegli quali frasi rivedere.</p>
+            <div class="chips" id="ripasso-bottoni"></div>
+            <button type="button" id="btn-cancella-voti" data-i18n="cancellaVoti">Cancella le mie risposte</button>
+        </section>
+
+        <footer id="pie-pagina">
+            <a href="privacy.html" data-i18n="fPrivacy">Privacy</a>
+            <span aria-hidden="true">&middot;</span>
+            <a href="termini.html" data-i18n="fTermini">Condizioni d'uso</a>
+            <span aria-hidden="true">&middot;</span>
+            <a href="avviso.html" data-i18n="fAvviso">Non affiliazione</a>
+        </footer>
+    </div>
+
+    <!-- GIOCO -->
+    <div id="schermata-gioco" style="display:none;">
+        <header>
+            <button id="btn-home" aria-label="Home" data-i18n="home">&larr; Home</button>
+            <h1>Sebugi Books</h1>
+        </header>
+
+        <main>
+            <div id="mini-voti" style="display:none;" aria-live="polite"></div>
+            <div id="card-frase">
+                <div id="illustrazione" aria-hidden="true"></div>
+                <p id="info-frase">Di quale libro è questa frase?</p>
+                <p id="testo-frase"></p>
+            </div>
+
+            <div id="risposta" style="display:none;">
+                <h2 id="titolo-risposta"></h2>
+                <p id="autore-risposta"></p>
+                <span id="genere-risposta"></span>
+                <p id="traduzione-risposta"></p>
+
+                <div id="bottoni-anki">
+                    <button class="anki-btn" id="btn-corretto" data-i18n="corretto">Corretto</button>
+                    <button class="anki-btn" id="btn-insicuro" data-i18n="insicuro">Insicuro</button>
+                    <button class="anki-btn" id="btn-sbagliato" data-i18n="sbagliato">Sbagliato</button>
+                    <button class="anki-btn" id="btn-nonricordo" data-i18n="nonricordavo">Non ricordavo</button>
+                    <button class="anki-btn" id="btn-nonsapevo" data-i18n="nonsapevo">Non lo sapevo</button>
+                </div>
+            </div>
+
+            <button id="btn-mostra-risposta" style="display:none;" data-i18n="mostra">Mostra risposta</button>
+        </main>
+
+        <aside id="statistiche" style="display:none;" aria-live="polite">
+            <h3 id="stat-titolo"></h3>
+            <div id="stat-grafico"></div>
+        </aside>
+    </div>
+
+    <script src="illustrazioni.js?v=8"></script>
+    <script src="app.js?v=11"></script>
+</body>
+</html>
