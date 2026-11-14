@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#f5eddc">
+<title>I promessi sposi: riconosci le sue frasi? | Sebugi Books</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32.png">
+    <link rel="apple-touch-icon" href="../favicon-192.png">
+<meta name="description" content="Cinque frasi, due risposte. Metti alla prova quanto conosci I promessi sposi. Gratis, in due minuti.">
+<link rel="canonical" href="https://books.sebugi.com/landing/promessi-sposi.html">
+<meta name="robots" content="noindex">
+<style>
+*{box-sizing:border-box}
+body{margin:0;background:#f5eddc;color:#3b2f22;font-family:Georgia,"Times New Roman",serif;line-height:1.5}
+.wrap{max-width:560px;margin:0 auto;padding:22px 18px 40px}
+.marca{font-size:.8rem;letter-spacing:.14em;text-transform:uppercase;color:#7a6a55;text-align:center;margin:0 0 6px}
+h1{font-size:1.7rem;line-height:1.2;margin:.2em 0 .3em;text-align:center}
+.sotto{text-align:center;color:#6b5b47;margin:0 0 20px}
+.card{background:#fffaf0;border:1px solid #d9c9a8;border-radius:12px;padding:20px;box-shadow:0 2px 8px rgba(80,60,30,.08)}
+.num{font-size:.85rem;color:#7a6a55;margin:0 0 8px}
+.frase{font-size:1.2rem;font-style:italic;margin:0 0 16px;white-space:pre-line}
+.opz{display:block;width:100%;text-align:left;margin:8px 0;padding:13px 14px;font:inherit;font-size:1rem;background:#fff;border:1px solid #cdb98f;border-radius:8px;color:inherit;cursor:pointer}
+.opz:hover:not(:disabled){background:#f3e8cf}
+.opz.ok{background:#dcebd2;border-color:#6a9a52}
+.opz.no{background:#f4d9d3;border-color:#b9604f}
+.esito{margin:14px 0 4px;font-weight:bold}
+.orig{font-size:.9rem;color:#6b5b47;margin:0 0 12px}.orig:empty{display:none}
+.avanti,.cta{display:block;width:100%;padding:14px;margin-top:12px;font:inherit;font-weight:bold;font-size:1.05rem;text-align:center;text-decoration:none;color:#fff;background:linear-gradient(#5d8a4a,#46703a);border:0;border-radius:8px;cursor:pointer}
+.punti{font-size:1.5rem;text-align:center;margin:0 0 6px}
+.nota{font-size:.85rem;color:#7a6a55;text-align:center;margin-top:12px}
+.piede{text-align:center;font-size:.8rem;color:#7a6a55;margin-top:26px}
+.piede a{color:#7a6a55}
+[hidden]{display:none!important}
+</style>
+</head>
+<body>
+<div class="wrap">
+<img src="../logo.png" alt="Sebugi" width="150" style="display:block;margin:0 auto 6px;max-width:50%;height:auto">
+<h1>Conosci davvero I promessi sposi?</h1>
+<p class="sotto">Cinque frasi: sono dei Promessi sposi o di un altro grande romanzo italiano?</p>
+
+<div class="card" id="quiz">
+<p class="num">Frase <span id="n">1</span> di 5</p>
+<p class="frase" id="frase"></p>
+<div id="opzioni"></div>
+<div id="dopo" hidden>
+<p class="esito" id="esito"></p>
+<p class="orig" id="orig"></p>
+<button class="avanti" id="avanti" type="button">Avanti</button>
+</div>
+</div>
+
+<div class="card" id="fine" hidden>
+<p class="punti" id="punti"></p>
+<p id="commento" style="text-align:center"></p>
+<p style="text-align:center">Nell'app trovi le frasi celebri di I promessi sposi e di oltre 130 altri classici, con la traduzione in italiano. Tutte le frasi celebri sono incluse nella versione gratuita.</p>
+<a class="cta" href="https://books.sebugi.com/?lang=it" id="cta">Entra nell'app e continua a giocare</a>
+<button class="avanti" id="ripeti" type="button" style="background:#fff;color:#3b2f22;border:1px solid #cdb98f">Rifai il quiz</button>
+</div>
+
+<p class="piede"><a href="../privacy.html">Privacy</a> · <a href="../termini.html">Condizioni d'uso</a> · <a href="../avviso.html">Non affiliazione</a></p>
+</div>
+<script>
+var D={"own": [{"it": "Quel ramo del lago di Como, che volge a mezzogiorno, tra due catene non interrotte di monti, tutte a seni e a golfi, a seconda dello sporgere e del rientrare di quelli, vien, quasi a un tratto, a ristringersi, e a prender corso e figura di fiume.", "libro": "I promessi sposi", "en": ""}, {"it": "Addio, monti sorgenti dall’acque, ed elevati al cielo; cime inuguali, note a chi è cresciuto tra voi, e impresse nella sua mente, non meno che lo sia l’aspetto de’ suoi più familiari.", "libro": "I promessi sposi", "en": ""}, {"it": "Questo matrimonio non s’ha da fare, né domani, né mai.", "libro": "I promessi sposi", "en": ""}, {"it": "Carneade! Chi era costui?", "libro": "I promessi sposi", "en": ""}, {"it": "Il coraggio, uno non se lo può dare.", "libro": "I promessi sposi", "en": ""}, {"it": "Adelante, Pedro, si puedes.", "libro": "I promessi sposi", "en": ""}, {"it": "Il buon senso c’era; ma se ne stava nascosto, per paura del senso comune.", "libro": "I promessi sposi", "en": ""}, {"it": "La sventurata rispose.", "libro": "I promessi sposi", "en": ""}, {"it": "Dio perdona tante cose, per un’opera di misericordia!", "libro": "I promessi sposi", "en": ""}, {"it": "Chi dava a voi tanta giocondità è per tutto; e non turba mai la gioia de’ suoi figli, se non per prepararne loro una più certa e più grande.", "libro": "I promessi sposi", "en": ""}], "others": {"I Malavoglia": [{"it": "Ad ogni uccello il suo nido è bello.", "libro": "I Malavoglia", "en": ""}, {"it": "Il mare non ha paese nemmen lui, ed è di tutti quelli che lo stanno ad ascoltare.", "libro": "I Malavoglia", "en": ""}, {"it": "Gli uomini son fatti come le dita della mano: il dito grosso deve far da dito grosso, e il dito piccolo deve far da dito piccolo.", "libro": "I Malavoglia", "en": ""}, {"it": "Lo so anch’io che il mondo va così, e non abbiamo diritto di lagnarcene.", "libro": "I Malavoglia", "en": ""}], "Il fu Mattia Pascal": [{"it": "Una delle poche cose, anzi forse la sola ch’io sapessi di certo era questa: che mi chiamavo Mattia Pascal.", "libro": "Il fu Mattia Pascal", "en": ""}, {"it": "Maledetto sia Copernico!", "libro": "Il fu Mattia Pascal", "en": ""}, {"it": "Tutta la differenza, signor Meis, fra la tragedia antica e la moderna consiste in ciò, creda pure: in un buco nel cielo di carta.", "libro": "Il fu Mattia Pascal", "en": ""}], "Uno, nessuno e centomila": [{"it": "Mia moglie e il mio naso.", "libro": "Uno, nessuno e centomila", "en": ""}, {"it": "E la vita non conclude. Non può concludere. Se domani conclude, è finita.", "libro": "Uno, nessuno e centomila", "en": ""}, {"it": "Rinascere attimo per attimo.", "libro": "Uno, nessuno e centomila", "en": ""}, {"it": "Ma sì, ma sì, mio caro, pensateci bene: un minuto fa, prima che vi capitasse questo caso, voi eravate un altro; non solo, ma voi eravate anche cento altri, centomila altri.", "libro": "Uno, nessuno e centomila", "en": ""}], "Le avventure di Pinocchio": [{"it": "C’era una volta un pezzo di legno.", "libro": "Le avventure di Pinocchio", "en": ""}, {"it": "Le bugie, ragazzo mio, si riconoscono subito, perchè ve ne sono di due specie: vi sono le bugie che hanno le gambe corte, e le bugie che hanno il naso lungo.", "libro": "Le avventure di Pinocchio", "en": ""}, {"it": "Com’ero buffo, quand’ero un burattino! e come ora son contento di esser diventato un ragazzino perbene!", "libro": "Le avventure di Pinocchio", "en": ""}, {"it": "Nel paese dei Barbagianni c’è un campo benedetto chiamato da tutti il Campo dei miracoli.", "libro": "Le avventure di Pinocchio", "en": ""}], "Cuore": [{"it": "Oggi primo giorno di scuola.", "libro": "Cuore", "en": ""}, {"it": "Passarono come un sogno quei tre mesi di vacanza in campagna!", "libro": "Cuore", "en": ""}, {"it": "O Enrico, bada: questo è il più sacro degli affetti umani; disgraziato chi lo calpesta.", "libro": "Cuore", "en": ""}, {"it": "Coraggio Enrico! Studieremo insieme.", "libro": "Cuore", "en": ""}], "La coscienza di Zeno": [{"it": "La vita non è né brutta né bella, ma è originale!", "libro": "La coscienza di Zeno", "en": ""}, {"it": "La vita somiglia un poco alla malattia come procede per crisi e lisi ed ha i giornalieri miglioramenti e peggioramenti.", "libro": "La coscienza di Zeno", "en": ""}, {"it": "La vita attuale è inquinata alle radici.", "libro": "La coscienza di Zeno", "en": ""}, {"it": "Solo noi malati sappiamo qualche cosa di noi stessi.", "libro": "La coscienza di Zeno", "en": ""}, {"it": "Forse traverso una catastrofe inaudita prodotta dagli ordigni ritorneremo alla salute.", "libro": "La coscienza di Zeno", "en": ""}, {"it": "Perciò, per provare, accendo un’ultima sigaretta e forse la getterò via subito, disgustato.", "libro": "La coscienza di Zeno", "en": ""}]}, "A": "È dei Promessi sposi", "B": "È di un altro romanzo italiano", "libro": "I promessi sposi"};
+function mescola(a){a=a.slice();for(var i=a.length-1;i>0;i--){var j=Math.floor(Math.random()*(i+1));var t=a[i];a[i]=a[j];a[j]=t}return a}
+var dom=[],i=0,punti=0,chiuso=false;
+function el(x){return document.getElementById(x)}
+var PP=D.A,ALTRO=D.B;
+function prepara(){
+  var ids=mescola(D.own).slice(0,3).map(function(f){return {it:f.it,libro:D.libro,en:f.en}});
+  mescola(Object.keys(D.others)).slice(0,2).forEach(function(l){var f=mescola(D.others[l])[0];ids.push({it:f.it,libro:l,en:f.en})});
+  dom=mescola(ids).map(function(f){return {f:f,giusta:f.libro===D.libro?PP:ALTRO,opz:[PP,ALTRO]}});
+  i=0;punti=0;
+}
+function mostra(){
+  var q=dom[i];chiuso=false;
+  el("n").textContent=i+1;el("frase").textContent=q.f.it.replace(/ \/ /g,"\n");
+  el("dopo").hidden=true;
+  var box=el("opzioni");box.innerHTML="";
+  q.opz.forEach(function(t){
+    var b=document.createElement("button");b.type="button";b.className="opz";b.textContent=t;
+    b.onclick=function(){scegli(b,t)};box.appendChild(b)
+  })
+}
+function scegli(b,t){
+  if(chiuso)return;chiuso=true;
+  var q=dom[i];
+  [].forEach.call(el("opzioni").children,function(x){
+    x.disabled=true;
+    if(x.textContent===q.giusta)x.className="opz ok"
+  });
+  var libro=q.f.libro;
+  if(t===q.giusta){punti++;el("esito").textContent="Esatto! Viene da "+libro+"."}
+  else{b.className="opz no";el("esito").textContent="In realtà viene da "+libro+"."}
+  el("orig").textContent=q.f.en?"Originale: "+q.f.en:"";
+  el("avanti").textContent=i<4?"Avanti":"Vedi il risultato";
+  el("dopo").hidden=false
+}
+el("avanti").onclick=function(){
+  i++;
+  if(i<5){mostra();return}
+  el("quiz").hidden=true;el("fine").hidden=false;
+  el("punti").textContent="Ne hai riconosciute "+punti+" su 5";
+  el("commento").textContent=punti>=4?"Ottimo, conosci bene questo libro e i suoi compagni di scaffale.":punti>=2?"Buon risultato. C'è ancora molto da scoprire.":"Si impara giocando: ogni frase nuova è una da ricordare."
+};
+el("ripeti").onclick=function(){el("fine").hidden=true;el("quiz").hidden=false;prepara();mostra()};
+prepara();mostra();
+</script>
+</body>
+</html>
